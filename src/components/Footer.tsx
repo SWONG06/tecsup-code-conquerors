@@ -140,7 +140,7 @@ export const Footer = () => {
         {/* Final Bar */}
         <div className="pt-6 border-t border-border/40 mt-8 text-center md:text-left">
           <p className="text-muted-foreground text-xs sm:text-sm">
-            © 2025 TECSUP. Todos los derechos reservados  para no muchas personas.
+            © 2025 TECSUP. Todos los derechos reservados .
           </p>
         </div>
       </div>
