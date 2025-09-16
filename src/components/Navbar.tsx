@@ -193,7 +193,7 @@ export const Navbar: React.FC = () => {
                 <button
                   key={item.name}
                   onClick={() => scrollToSection(item.href)}
-                  className="text-sm font-medium hover:text-blue-500 transition-colors"
+                  className="text-sm font-medium hover:text-blue-500 transition-colors text-gray-800 dark:text-gray-200"
                 >
                   {item.name}
                 </button>
@@ -201,14 +201,14 @@ export const Navbar: React.FC = () => {
             </div>
 
             {/* CONTROLES DERECHA */}
-            <div className="flex items-center gap-2 relative">
+            <div className="flex items-center gap-2 relative text-gray-800 dark:text-gray-200">
               {/* 🔍 BOTÓN BUSCADOR */}
               <div className="relative">
                 <Button
                   variant="ghost"
                   size="icon"
                   onClick={() => setShowSearch((prev) => !prev)}
-                  className="h-9 w-9 hover:bg-muted/50"
+                  className="h-9 w-9 hover:bg-muted/50 text-gray-800 dark:text-gray-200"
                 >
                   <Search className="h-5 w-5" />
                 </Button>
@@ -230,7 +230,7 @@ export const Navbar: React.FC = () => {
                         <button
                           key={i}
                           onClick={() => goToSearchResult(result)}
-                          className="block text-sm text-left w-full px-2 py-1 rounded hover:bg-muted/50"
+                          className="block text-sm text-left w-full px-2 py-1 rounded hover:bg-muted/50 text-gray-800 dark:text-gray-200"
                         >
                           <span className="font-medium">{result.sectionTitle}</span>
                           <div className="truncate text-xs opacity-70">{result.text}</div>
@@ -246,16 +246,24 @@ export const Navbar: React.FC = () => {
                 variant="ghost"
                 size="icon"
                 onClick={toggleTheme}
-                className="h-9 w-9 hover:bg-muted/50"
+                className="h-9 w-9 hover:bg-muted/50 text-gray-800 dark:text-gray-200"
               >
-                {isDarkMode ? <Sun className="h-5 w-5" /> : <Moon className="h-5 w-5" />}
+                {isDarkMode ? (
+                  <Sun className="h-5 w-5" />
+                ) : (
+                  <Moon className="h-5 w-5" />
+                )}
               </Button>
 
               {/* 📱 MENÚ MÓVIL */}
               <div className="md:hidden">
                 <Sheet open={open} onOpenChange={setOpen}>
                   <SheetTrigger asChild>
-                    <Button variant="ghost" size="icon" className="h-9 w-9">
+                    <Button
+                      variant="ghost"
+                      size="icon"
+                      className="h-9 w-9 text-gray-800 dark:text-gray-200"
+                    >
                       {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
                     </Button>
                   </SheetTrigger>
@@ -268,7 +276,7 @@ export const Navbar: React.FC = () => {
                             setOpen(false);
                             setTimeout(() => scrollToSection(item.href), 150);
                           }}
-                          className="py-3 px-4 text-left text-lg hover:bg-muted/50 rounded"
+                          className="py-3 px-4 text-left text-lg hover:bg-muted/50 rounded text-gray-800 dark:text-gray-200"
                         >
                           {item.name}
                         </button>
