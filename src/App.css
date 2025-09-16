@@ -1,42 +1,538 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+@import "./theme-transitions.css";
+/* =====================================
+   TRANSICIONES SUAVES DE TEMA
+   ===================================== */
+
+/* Clase para transiciones durante el cambio de tema */
+.theme-transition {
+  transition: background-color 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+              color 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.theme-transition *,
+.theme-transition *::before,
+.theme-transition *::after {
+  transition: background-color 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+              border-color 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+              color 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+              fill 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+              stroke 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+              box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
+/* =====================================
+   MEJORAS ESPECÍFICAS PARA COMPONENTES
+   ===================================== */
+
+/* Navbar con transiciones suaves */
+.navbar-adaptive {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.navbar-adaptive.scrolled {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Footer con gradientes adaptativos */
+.footer-adaptive {
+  transition: background 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Cards con efectos suaves */
+.card-adaptive {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.card-adaptive:hover {
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Botones con estados adaptativos */
+.btn-adaptive {
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.hover-adaptive {
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Inputs con focus suave */
+.input-adaptive {
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.focus-ring {
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Dividers adaptativos */
+.divider-adaptive {
+  transition: border-color 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* =====================================
+   EFECTOS ESPECIALES PARA IMÁGENES
+   ===================================== */
+
+/* Logos que se adaptan automáticamente */
+img.logo-adaptive {
+  transition: filter 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+              transform 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Modo oscuro para imágenes */
+.dark img.logo-adaptive {
+  filter: brightness(1.1) contrast(1.25);
+}
+
+/* SVGs adaptativos */
+svg {
+  transition: fill 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+              stroke 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* =====================================
+   OVERLAYS Y MODALES ADAPTATIVOS
+   ===================================== */
+
+.overlay-adaptive {
+  transition: opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+              backdrop-filter 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Dropdown menus con transiciones */
+[role="menu"],
+[role="listbox"],
+.dropdown-content {
+  transition: background-color 0.2s cubic-bezier(0.4, 0, 0.2, 1),
+              border-color 0.2s cubic-bezier(0.4, 0, 0.2, 1),
+              box-shadow 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* =====================================
+   ESTADOS DE CARGA ADAPTATIVOS
+   ===================================== */
+
+.loading-shimmer {
+  background: linear-gradient(
+    90deg,
+    hsl(var(--muted)) 0%,
+    hsl(var(--muted-foreground) / 0.1) 50%,
+    hsl(var(--muted)) 100%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 2s ease-in-out infinite;
+}
+
+/* Skeleton loader adaptativo */
+.skeleton-adaptive {
+  background: hsl(var(--muted));
+  animation: skeleton-pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes skeleton-pulse {
+  0%, 100% {
+    opacity: 1;
   }
-  to {
-    transform: rotate(360deg);
+  50% {
+    opacity: 0.5;
   }
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
+/* =====================================
+   TOAST Y NOTIFICACIONES ADAPTATIVAS
+   ===================================== */
+
+.toast-adaptive {
+  background: hsl(var(--background));
+  border: 1px solid hsl(var(--border));
+  color: hsl(var(--foreground));
+  box-shadow: var(--shadow-elevation-medium);
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.toast-adaptive.success {
+  border-color: hsl(var(--tech-accent));
+  background: hsl(var(--tech-accent) / 0.1);
+}
+
+.toast-adaptive.error {
+  border-color: hsl(var(--destructive));
+  background: hsl(var(--destructive) / 0.1);
+}
+
+.toast-adaptive.warning {
+  border-color: hsl(var(--tech-secondary));
+  background: hsl(var(--tech-secondary) / 0.1);
+}
+
+.toast-adaptive.info {
+  border-color: hsl(var(--tech-primary));
+  background: hsl(var(--tech-primary) / 0.1);
+}
+
+/* =====================================
+   FORMULARIOS ADAPTATIVOS
+   ===================================== */
+
+.form-adaptive {
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.form-group-adaptive {
+  margin-bottom: 1rem;
+}
+
+.form-label-adaptive {
+  @apply text-foreground font-medium text-sm mb-2 block;
+}
+
+.form-input-adaptive {
+  @apply w-full px-3 py-2 bg-background border border-input rounded-md;
+  @apply text-foreground placeholder:text-muted-foreground;
+  @apply focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.form-textarea-adaptive {
+  @apply form-input-adaptive resize-y min-h-[80px];
+}
+
+.form-select-adaptive {
+  @apply form-input-adaptive cursor-pointer;
+}
+
+.form-checkbox-adaptive {
+  @apply w-4 h-4 text-primary bg-background border-input rounded;
+  @apply focus:ring-2 focus:ring-primary/20;
+}
+
+.form-error-adaptive {
+  @apply text-destructive text-sm mt-1;
+}
+
+.form-help-adaptive {
+  @apply text-muted-foreground text-sm mt-1;
+}
+
+/* =====================================
+   TABLAS ADAPTATIVAS
+   ===================================== */
+
+.table-adaptive {
+  @apply w-full border-collapse bg-background;
+}
+
+.table-adaptive th {
+  @apply bg-muted text-muted-foreground font-medium text-left px-4 py-3;
+  @apply border-b border-border;
+}
+
+.table-adaptive td {
+  @apply px-4 py-3 text-foreground border-b border-border;
+}
+
+.table-adaptive tr:hover td {
+  @apply bg-accent;
+}
+
+.table-adaptive tr:last-child td {
+  @apply border-b-0;
+}
+
+/* =====================================
+   BADGES Y ETIQUETAS ADAPTATIVAS
+   ===================================== */
+
+.badge-adaptive {
+  @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.badge-primary {
+  @apply bg-primary text-primary-foreground;
+}
+
+.badge-secondary {
+  @apply bg-secondary text-secondary-foreground;
+}
+
+.badge-success {
+  @apply bg-green-100 text-green-800;
+  @apply dark:bg-green-800/20 dark:text-green-300;
+}
+
+.badge-warning {
+  @apply bg-yellow-100 text-yellow-800;
+  @apply dark:bg-yellow-800/20 dark:text-yellow-300;
+}
+
+.badge-error {
+  @apply bg-red-100 text-red-800;
+  @apply dark:bg-red-800/20 dark:text-red-300;
+}
+
+.badge-info {
+  @apply bg-blue-100 text-blue-800;
+  @apply dark:bg-blue-800/20 dark:text-blue-300;
+}
+
+/* =====================================
+   NAVEGACIÓN BREADCRUMBS ADAPTATIVA
+   ===================================== */
+
+.breadcrumb-adaptive {
+  @apply flex items-center space-x-1 text-sm text-muted-foreground;
+}
+
+.breadcrumb-item {
+  @apply flex items-center;
+}
+
+.breadcrumb-link {
+  @apply text-foreground hover:text-primary;
+  @apply focus-ring rounded-sm;
+  transition: color 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.breadcrumb-separator {
+  @apply text-muted-foreground mx-2;
+}
+
+/* =====================================
+   PAGINACIÓN ADAPTATIVA
+   ===================================== */
+
+.pagination-adaptive {
+  @apply flex items-center justify-center space-x-1;
+}
+
+.pagination-item {
+  @apply w-10 h-10 flex items-center justify-center rounded-md;
+  @apply text-foreground hover:bg-accent;
+  @apply focus-ring;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.pagination-item.active {
+  @apply bg-primary text-primary-foreground;
+}
+
+.pagination-item:disabled {
+  @apply opacity-50 cursor-not-allowed;
+}
+
+/* =====================================
+   ACORDEÓN ADAPTATIVO
+   ===================================== */
+
+.accordion-adaptive {
+  @apply border border-border rounded-lg overflow-hidden;
+}
+
+.accordion-item {
+  @apply border-b border-border last:border-b-0;
+}
+
+.accordion-trigger {
+  @apply w-full flex items-center justify-between p-4;
+  @apply bg-background hover:bg-accent text-foreground;
+  @apply focus-ring;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.accordion-content {
+  @apply px-4 pb-4 text-foreground bg-background;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* =====================================
+   TABS ADAPTATIVAS
+   ===================================== */
+
+.tabs-adaptive {
+  @apply w-full;
+}
+
+.tabs-list {
+  @apply flex border-b border-border;
+}
+
+.tabs-trigger {
+  @apply px-4 py-2 text-muted-foreground hover:text-foreground;
+  @apply border-b-2 border-transparent hover:border-border;
+  @apply focus-ring rounded-t-md;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.tabs-trigger[aria-selected="true"] {
+  @apply text-foreground border-primary;
+}
+
+.tabs-content {
+  @apply mt-4 text-foreground;
+}
+
+/* =====================================
+   PROGRESS BAR ADAPTATIVO
+   ===================================== */
+
+.progress-adaptive {
+  @apply w-full h-2 bg-secondary rounded-full overflow-hidden;
+}
+
+.progress-bar {
+  @apply h-full bg-primary rounded-full;
+  transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* =====================================
+   TOOLTIP ADAPTATIVO
+   ===================================== */
+
+.tooltip-adaptive {
+  @apply bg-popover text-popover-foreground px-2 py-1 text-sm rounded-md;
+  @apply shadow-adaptive border border-border;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* =====================================
+   CÓDIGO Y PRE ADAPTATIVO
+   ===================================== */
+
+code {
+  @apply bg-muted text-foreground px-1.5 py-0.5 rounded text-sm font-mono;
+}
+
+pre {
+  @apply bg-muted text-foreground p-4 rounded-lg overflow-x-auto;
+  @apply border border-border;
+}
+
+pre code {
+  @apply bg-transparent px-0 py-0;
+}
+
+/* =====================================
+   BLOCKQUOTE ADAPTATIVO
+   ===================================== */
+
+blockquote {
+  @apply border-l-4 border-primary pl-4 italic text-foreground;
+  @apply bg-muted/50 py-2 rounded-r-md;
+}
+
+/* =====================================
+   HR ADAPTATIVO
+   ===================================== */
+
+hr {
+  @apply border-border;
+}
+
+/* =====================================
+   ESTADOS DE HOVER PARA TÁCTIL
+   ===================================== */
+
+@media (hover: none) {
+  .hover-adaptive:hover,
+  .card-adaptive:hover,
+  .btn-adaptive:hover {
+    transform: none;
+    background: transparent;
+  }
+  
+  .navbar-adaptive button:hover,
+  .footer-adaptive a:hover {
+    background: transparent;
+    color: hsl(var(--foreground));
   }
 }
 
-.card {
-  padding: 2em;
+/* =====================================
+   MEJORAS DE RENDIMIENTO
+   ===================================== */
+
+/* Optimización para animaciones */
+.animate-fade-in,
+.animate-fade-out,
+.animate-scale-in {
+  will-change: opacity, transform;
 }
 
-.read-the-docs {
-  color: #888;
+.hover-adaptive {
+  will-change: background-color, transform;
+}
+
+.focus-ring:focus {
+  will-change: box-shadow;
+}
+
+/* =====================================
+   ESTADOS DE ERROR
+   ===================================== */
+
+.error-boundary-adaptive {
+  @apply p-8 text-center bg-destructive/10 border border-destructive/20 rounded-lg;
+  @apply text-destructive;
+}
+
+.error-message-adaptive {
+  @apply text-destructive text-sm;
+}
+
+.warning-message-adaptive {
+  @apply text-orange-600 dark:text-orange-400 text-sm;
+}
+
+.success-message-adaptive {
+  @apply text-green-600 dark:text-green-400 text-sm;
+}
+
+.info-message-adaptive {
+  @apply text-blue-600 dark:text-blue-400 text-sm;
+}
+
+/* =====================================
+   UTILIDADES FINALES
+   ===================================== */
+
+/* Clase para forzar tema específico en elementos */
+.force-light {
+  color-scheme: light;
+  --background: 0 0% 100%;
+  --foreground: 222.2 84% 4.9%;
+}
+
+.force-dark {
+  color-scheme: dark;
+  --background: 222.2 84% 4.9%;
+  --foreground: 210 40% 98%;
+}
+
+/* Clase para debugging de temas */
+.theme-debug::before {
+  content: attr(data-theme);
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  background: hsl(var(--primary));
+  color: hsl(var(--primary-foreground));
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  z-index: 9999;
+}
+
+/* =====================================
+   SOPORTE PARA CSS CUSTOM PROPERTIES
+   ===================================== */
+
+/* Permitir que elementos custom usen las variables */
+* {
+  --current-bg: hsl(var(--background));
+  --current-fg: hsl(var(--foreground));
+  --current-border: hsl(var(--border));
+  --current-accent: hsl(var(--accent));
+  --current-muted: hsl(var(--muted));
 }
