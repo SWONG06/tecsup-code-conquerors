@@ -114,11 +114,11 @@ export const HeroSection = () => {
             </div>
 
             {/* 🔹 Title */}
-            <h1>
-              <span className="text-6xl sm:text-8xl md:text-9xl lg:text-[10rem] font-black bg-gradient-to-r from-purple-400 via-blue-400 to-cyan-400 bg-clip-text text-transparent animate-gradient leading-none">
+            <h1 className="text-center lg:text-left">
+              <span className="text-4xl sm:text-6xl md:text-8xl lg:text-[10rem] font-black bg-gradient-to-r from-purple-400 via-blue-400 to-cyan-400 bg-clip-text text-transparent animate-gradient leading-none">
                 HACKATHON
               </span>
-              <span className="block text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-extralight bg-gradient-to-r from-cyan-400 via-purple-400 to-blue-400 bg-clip-text text-transparent animate-gradient mt-2">
+              <span className="block text-2xl sm:text-4xl md:text-6xl lg:text-8xl font-extralight bg-gradient-to-r from-cyan-400 via-purple-400 to-blue-400 bg-clip-text text-transparent animate-gradient mt-2">
                 2025
               </span>
             </h1>
