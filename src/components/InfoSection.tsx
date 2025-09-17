@@ -58,7 +58,7 @@ const stats = [
 
 export const InfoSection = () => {
   return (
-    <section className="py-16 px-4 sm:px-6 lg:px-8 bg-background">
+    <section id="info" className="py-16 px-4 sm:px-6 lg:px-8 bg-background">
       {/* Features */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 mb-20">
         {features.map((feature, index) => (
@@ -72,20 +72,20 @@ export const InfoSection = () => {
             <CardContent className="p-6 sm:p-8 text-center relative">
               {/* Icono */}
               <div
-                className={`inline-flex items-center justify-center w-16 h-16 sm:w-20 sm:h-20 ${feature.bgColor} 
+                className={`inline-flex items-center justify-center w-20 h-20 sm:w-24 sm:h-24 ${feature.bgColor} 
                             rounded-2xl mb-6 transition-all duration-300 group-hover:scale-110 group-hover:rotate-6
                             border border-border/50`}
               >
-                <feature.icon className={`relative w-8 h-8 sm:w-10 sm:h-10 ${feature.iconColor} z-10`} />
+                <feature.icon className={`relative w-10 h-10 sm:w-12 sm:h-12 ${feature.iconColor} z-10`} />
               </div>
 
               {/* Título */}
-              <h3 className="text-lg sm:text-xl font-bold mb-4 text-foreground group-hover:text-tech-primary transition-colors duration-300">
+              <h3 className="text-xl sm:text-2xl font-bold mb-4 text-foreground group-hover:text-tech-primary transition-colors duration-300">
                 {feature.title}
               </h3>
 
               {/* Descripción */}
-              <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">
+              <p className="text-lg sm:text-xl text-muted-foreground leading-relaxed">
                 {feature.description}
               </p>
             </CardContent>
@@ -106,23 +106,23 @@ export const InfoSection = () => {
               {/* Icono */}
               <div className="flex items-center justify-center mb-4">
                 <div
-                  className="p-2 sm:p-3 rounded-full bg-background/20 backdrop-blur-sm 
+                  className="p-3 sm:p-4 rounded-full bg-background/20 backdrop-blur-sm 
                               border border-border/30 group-hover:scale-110 transition-transform duration-300"
                 >
-                  <stat.icon className={`w-6 h-6 sm:w-8 sm:h-8 ${stat.color}`} />
+                  <stat.icon className={`w-8 h-8 sm:w-10 sm:h-10 ${stat.color}`} />
                 </div>
               </div>
 
               {/* Número */}
               <div
-                className={`text-4xl sm:text-5xl md:text-6xl font-black ${stat.color} mb-3 
+                className={`text-5xl sm:text-6xl md:text-7xl font-black ${stat.color} mb-3 
                             group-hover:scale-110 transition-transform duration-300`}
               >
                 {stat.number}
               </div>
 
               {/* Label */}
-              <div className="text-sm sm:text-base text-muted-foreground font-medium">
+              <div className="text-lg sm:text-xl text-muted-foreground font-medium">
                 {stat.label}
               </div>
             </div>

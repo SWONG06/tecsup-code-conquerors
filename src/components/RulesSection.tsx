@@ -98,10 +98,10 @@ export const RulesSection = () => {
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-20">
-          <h2 className="text-4xl md:text-6xl font-black bg-gradient-to-r from-blue-600 dark:from-blue-400 via-emerald-600 dark:via-emerald-400 to-purple-600 dark:to-purple-400 bg-clip-text text-transparent mb-6">
+          <h2 className="text-6xl md:text-8xl font-black bg-gradient-to-r from-blue-600 dark:from-blue-400 via-emerald-600 dark:via-emerald-400 to-purple-600 dark:to-purple-400 bg-clip-text text-transparent mb-6">
             Bases del Hackathon
           </h2>
-          <p className="text-lg md:text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-2xl md:text-3xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto leading-relaxed">
             Todo lo que necesitas saber para participar en el hackathon más{" "}
             <span className="text-emerald-600 dark:text-emerald-400 font-semibold">emocionante</span>{" "}
             del año.
@@ -110,7 +110,7 @@ export const RulesSection = () => {
 
         {/* Rules */}
         <div className="mb-24">
-          <h3 className="text-3xl font-bold text-center mb-12 text-gray-900 dark:text-white">
+          <h3 className="text-5xl font-bold text-center mb-12 text-gray-900 dark:text-white">
             Reglas Principales
           </h3>
           <div className="grid lg:grid-cols-3 gap-8">
@@ -131,17 +131,17 @@ export const RulesSection = () => {
 
                   <CardHeader className="text-center pb-4 relative z-10">
                     <div
-                      className={`inline-flex items-center justify-center w-16 h-16 ${colorClasses.bg} ${colorClasses.text} rounded-2xl mb-5 
+                      className={`inline-flex items-center justify-center w-20 h-20 ${colorClasses.bg} ${colorClasses.text} rounded-2xl mb-5 
                         group-hover:scale-110 group-hover:rotate-6 transition-all duration-500`}
                     >
-                      <rule.icon className="w-8 h-8" />
+                      <rule.icon className="w-10 h-10" />
                     </div>
-                    <CardTitle className="text-lg font-bold text-gray-900 dark:text-white group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors duration-300">
+                    <CardTitle className="text-2xl font-bold text-gray-900 dark:text-white group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors duration-300">
                       {rule.title}
                     </CardTitle>
                   </CardHeader>
                   <CardContent className="text-center relative z-10">
-                    <p className="text-gray-600 dark:text-gray-300 leading-relaxed text-sm md:text-base">
+                    <p className="text-gray-600 dark:text-gray-300 leading-relaxed text-xl md:text-2xl">
                       {rule.description}
                     </p>
                   </CardContent>
@@ -156,8 +156,8 @@ export const RulesSection = () => {
 
         {/* Important Notes */}
         <div className="bg-white/50 dark:bg-gray-900/50 backdrop-blur-lg rounded-3xl p-6 sm:p-8 lg:p-10 border border-gray-200/50 dark:border-gray-700/50 shadow-lg dark:shadow-blue-500/10">
-          <h3 className="text-2xl md:text-3xl font-bold text-center mb-8 sm:mb-10 lg:mb-12 flex items-center justify-center gap-3 text-gray-900 dark:text-white">
-            <CheckCircle2 className="w-6 h-6 sm:w-8 sm:h-8 text-blue-600 dark:text-blue-400 animate-bounce" />
+          <h3 className="text-4xl md:text-5xl font-bold text-center mb-8 sm:mb-10 lg:mb-12 flex items-center justify-center gap-3 text-gray-900 dark:text-white">
+            <CheckCircle2 className="w-8 h-8 sm:w-10 sm:h-10 text-blue-600 dark:text-blue-400 animate-bounce" />
             Notas Importantes
           </h3>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
@@ -168,10 +168,10 @@ export const RulesSection = () => {
                   hover:border-blue-500/40 dark:hover:border-blue-400/40 hover:shadow-[0_0_20px_rgba(34,197,94,0.4)] dark:hover:shadow-[0_0_20px_rgba(52,211,153,0.4)]
                   active:shadow-[0_0_30px_rgba(34,197,94,0.6)] dark:active:shadow-[0_0_30px_rgba(52,211,153,0.6)] active:scale-95 transition-all duration-300 cursor-pointer"
               >
-                <div className="flex-shrink-0 w-6 h-6 sm:w-7 sm:h-7 rounded-full bg-blue-500/10 dark:bg-blue-400/10 flex items-center justify-center text-blue-600 dark:text-blue-400">
-                  <CheckCircle2 className="w-4 h-4 sm:w-5 sm:h-5" />
+                <div className="flex-shrink-0 w-8 h-8 sm:w-9 sm:h-9 rounded-full bg-blue-500/10 dark:bg-blue-400/10 flex items-center justify-center text-blue-600 dark:text-blue-400">
+                  <CheckCircle2 className="w-5 h-5 sm:w-6 sm:h-6" />
                 </div>
-                <p className="text-gray-600 dark:text-gray-300 leading-relaxed text-sm md:text-base">
+                <p className="text-gray-600 dark:text-gray-300 leading-relaxed text-lg md:text-xl">
                   {note}
                 </p>
               </div>

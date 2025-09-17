@@ -142,9 +142,9 @@ export const Footer = () => {
               placeholder="Buscar en la página..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              className="w-full"
+              className="w-full text-lg"
             />
-            <Button type="submit" variant="default" className="flex gap-1">
+            <Button type="submit" variant="default" className="flex gap-1 text-lg">
               <Search className="h-4 w-4" /> Buscar
             </Button>
           </form>
@@ -152,7 +152,7 @@ export const Footer = () => {
           {/* Resultados */}
           {showResults && searchResults.length > 0 && (
             <div className="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-3 max-w-md mx-auto mb-6 text-left">
-              <h4 className="text-sm font-semibold text-gray-700 dark:text-gray-200 mb-2">
+              <h4 className="text-lg font-semibold text-gray-700 dark:text-gray-200 mb-2">
                 Resultados:
               </h4>
               <ul className="space-y-2">
@@ -160,7 +160,7 @@ export const Footer = () => {
                   <li key={i}>
                     <button
                       onClick={() => goToSearchResult(result)}
-                      className="text-sm text-blue-600 dark:text-blue-400 hover:underline"
+                      className="text-lg text-blue-600 dark:text-blue-400 hover:underline"
                     >
                       {result.text.length > 60
                         ? result.text.slice(0, 60) + "..."
@@ -172,10 +172,10 @@ export const Footer = () => {
             </div>
           )}
 
-          <h2 className="text-xl sm:text-2xl lg:text-3xl font-extrabold text-gray-900 dark:text-white mb-2 sm:mb-3 tracking-tight">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-gray-900 dark:text-white mb-2 sm:mb-3 tracking-tight">
             Hackathon 2025
           </h2>
-          <p className="text-gray-600 dark:text-gray-300 leading-relaxed max-w-lg sm:max-w-xl lg:max-w-2xl mx-auto mb-4 sm:mb-6 lg:mb-8 text-sm sm:text-base px-2">
+          <p className="text-gray-600 dark:text-gray-300 leading-relaxed max-w-lg sm:max-w-xl lg:max-w-2xl mx-auto mb-4 sm:mb-6 lg:mb-8 text-lg sm:text-xl px-2">
             Únete al evento tecnológico más innovador del año. 48 horas de
             código, creatividad y competencia para crear el futuro junto a TECSUP.
           </p>

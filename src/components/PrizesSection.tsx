@@ -80,10 +80,10 @@ export const PrizesSection = () => {
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-20">
-          <h2 className="text-5xl md:text-6xl font-extrabold bg-gradient-to-r from-yellow-400 via-tech-primary to-tech-accent bg-clip-text text-transparent tracking-tight">
+          <h2 className="text-6xl md:text-7xl font-extrabold bg-gradient-to-r from-yellow-400 via-tech-primary to-tech-accent bg-clip-text text-transparent tracking-tight">
             Premios y Reconocimientos
           </h2>
-          <p className="mt-6 text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+          <p className="mt-6 text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
             Más de{" "}
             <span className="text-tech-primary font-bold">S/ 50,000</span> en
             premios para destacar la excelencia y la innovación.
@@ -115,13 +115,13 @@ export const PrizesSection = () => {
                   )}
 
                   <CardHeader className="relative z-10 text-center pb-6">
-                    <div className="inline-flex items-center justify-center w-28 h-28 bg-background/90 dark:bg-background/80 rounded-full mb-5 shadow-inner transition-all duration-500">
-                      <prize.icon className="w-14 h-14 text-foreground" />
+                    <div className="inline-flex items-center justify-center w-32 h-32 bg-background/90 dark:bg-background/80 rounded-full mb-5 shadow-inner transition-all duration-500">
+                      <prize.icon className="w-16 h-16 text-foreground" />
                     </div>
-                    <CardTitle className="text-2xl font-extrabold text-white drop-shadow-lg">
+                    <CardTitle className="text-3xl font-extrabold text-white drop-shadow-lg">
                       {prize.position}
                     </CardTitle>
-                    <div className="text-4xl font-extrabold text-white drop-shadow-lg">
+                    <div className="text-5xl font-extrabold text-white drop-shadow-lg">
                       {prize.amount}
                     </div>
                   </CardHeader>
@@ -132,7 +132,7 @@ export const PrizesSection = () => {
                         <Badge
                           key={i}
                           variant="secondary"
-                          className="px-4 py-1.5 text-sm rounded-full bg-white/30 dark:bg-white/20 text-white border-white/40 dark:border-white/30 backdrop-blur-sm"
+                          className="px-4 py-2 text-lg rounded-full bg-white/30 dark:bg-white/20 text-white border-white/40 dark:border-white/30 backdrop-blur-sm"
                         >
                           {benefit}
                         </Badge>
@@ -147,10 +147,10 @@ export const PrizesSection = () => {
 
         {/* Premios especiales */}
         <div className="bg-card/60 dark:bg-card/40 backdrop-blur-lg border border-border/50 rounded-3xl p-10 shadow-xl">
-          <h3 className="text-3xl md:text-4xl font-extrabold text-center text-foreground mb-12 flex items-center justify-center gap-2">
-            <Sparkles className="w-6 h-6 text-tech-accent" />
+          <h3 className="text-4xl md:text-5xl font-extrabold text-center text-foreground mb-12 flex items-center justify-center gap-2">
+            <Sparkles className="w-8 h-8 text-tech-accent" />
             Premios Especiales
-            <Sparkles className="w-6 h-6 text-tech-accent" />
+            <Sparkles className="w-8 h-8 text-tech-accent" />
           </h3>
           <div className="grid md:grid-cols-2 gap-8">
             {specialPrizes.map((prize, index) => (
@@ -159,16 +159,16 @@ export const PrizesSection = () => {
                 className="border border-border/40 bg-background/80 dark:bg-background/60 backdrop-blur-md hover:shadow-xl hover:scale-105 transition-all duration-500 rounded-2xl hover:border-tech-accent/50"
               >
                 <CardContent className="p-8 text-center">
-                  <div className="inline-flex items-center justify-center w-20 h-20 bg-tech-accent/10 dark:bg-tech-accent/20 text-tech-accent rounded-full mb-5 border border-tech-accent/20">
-                    <Gift className="w-10 h-10" />
+                  <div className="inline-flex items-center justify-center w-24 h-24 bg-tech-accent/10 dark:bg-tech-accent/20 text-tech-accent rounded-full mb-5 border border-tech-accent/20">
+                    <Gift className="w-12 h-12" />
                   </div>
-                  <h4 className="text-xl font-bold text-foreground mb-2">
+                  <h4 className="text-2xl font-bold text-foreground mb-2">
                     {prize.title}
                   </h4>
-                  <div className="text-2xl font-extrabold text-tech-accent mb-3">
+                  <div className="text-3xl font-extrabold text-tech-accent mb-3">
                     {prize.amount}
                   </div>
-                  <p className="text-muted-foreground text-sm leading-relaxed">
+                  <p className="text-muted-foreground text-lg leading-relaxed">
                     {prize.description}
                   </p>
                 </CardContent>

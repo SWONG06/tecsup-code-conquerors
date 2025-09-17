@@ -34,13 +34,13 @@ export const RegistrationSection = () => {
         
         {/* Header */}
         <div className="text-center mb-16">
-          <Badge variant="secondary" className="mb-4 bg-tech-primary/10 text-tech-primary hover:bg-tech-primary/20">
+          <Badge variant="secondary" className="mb-4 bg-tech-primary/10 text-tech-primary hover:bg-tech-primary/20 text-lg px-4 py-2">
             ¡Únete al Hackathon!
           </Badge>
-          <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-tech-primary via-tech-secondary to-tech-accent bg-clip-text text-transparent mb-6">
+          <h2 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-tech-primary via-tech-secondary to-tech-accent bg-clip-text text-transparent mb-6">
             Formulario de Registro
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+          <p className="text-2xl text-muted-foreground max-w-3xl mx-auto">
             Regístrate ahora y asegura tu lugar en el evento tecnológico más importante del año.
             Completa tus datos para participar en el Hackathon Tecsup 2025.
           </p>
@@ -51,10 +51,10 @@ export const RegistrationSection = () => {
           {/* Registration Form */}
           <Card className="border-tech-primary/20 shadow-2xl backdrop-blur-sm">
             <CardHeader>
-              <CardTitle className="text-2xl font-bold text-tech-primary">
+              <CardTitle className="text-3xl font-bold text-tech-primary">
                 Datos de Registro
               </CardTitle>
-              <CardDescription>
+              <CardDescription className="text-lg">
                 Completa la información requerida para tu participación
               </CardDescription>
             </CardHeader>
@@ -62,61 +62,61 @@ export const RegistrationSection = () => {
               {/* Nombre y Email */}
               <div className="grid md:grid-cols-2 gap-4">
                 <div className="space-y-2 relative">
-                  <Label htmlFor="nombre">Nombre Completo <span className="text-destructive">*</span></Label>
-                  <Input id="nombre" placeholder="Tu nombre completo" className="pl-10 border-tech-primary/30 focus:ring-2 focus:ring-tech-primary/50" />
-                  <User className="absolute left-3 top-9 w-5 h-5 text-tech-primary/60" />
+                  <Label htmlFor="nombre" className="text-lg">Nombre Completo <span className="text-destructive">*</span></Label>
+                  <Input id="nombre" placeholder="Tu nombre completo" className="pl-10 border-tech-primary/30 focus:ring-2 focus:ring-tech-primary/50 text-lg py-3" />
+                  <User className="absolute left-3 top-10 w-6 h-6 text-tech-primary/60" />
                 </div>
                 <div className="space-y-2 relative">
-                  <Label htmlFor="email">Email <span className="text-destructive">*</span></Label>
-                  <Input id="email" type="email" placeholder="tu@email.com" className="pl-10 border-tech-primary/30 focus:ring-2 focus:ring-tech-primary/50" />
-                  <Mail className="absolute left-3 top-9 w-5 h-5 text-tech-primary/60" />
+                  <Label htmlFor="email" className="text-lg">Email <span className="text-destructive">*</span></Label>
+                  <Input id="email" type="email" placeholder="tu@email.com" className="pl-10 border-tech-primary/30 focus:ring-2 focus:ring-tech-primary/50 text-lg py-3" />
+                  <Mail className="absolute left-3 top-10 w-6 h-6 text-tech-primary/60" />
                 </div>
               </div>
 
               {/* Teléfono e Institución */}
               <div className="grid md:grid-cols-2 gap-4">
                 <div className="space-y-2 relative">
-                  <Label htmlFor="telefono">Teléfono <span className="text-destructive">*</span></Label>
-                  <Input id="telefono" placeholder="+51 999 999 999" className="pl-10 border-tech-primary/30 focus:ring-2 focus:ring-tech-primary/50" />
-                  <Phone className="absolute left-3 top-9 w-5 h-5 text-tech-primary/60" />
+                  <Label htmlFor="telefono" className="text-lg">Teléfono <span className="text-destructive">*</span></Label>
+                  <Input id="telefono" placeholder="+51 999 999 999" className="pl-10 border-tech-primary/30 focus:ring-2 focus:ring-tech-primary/50 text-lg py-3" />
+                  <Phone className="absolute left-3 top-10 w-6 h-6 text-tech-primary/60" />
                 </div>
                 <div className="space-y-2 relative">
-                  <Label htmlFor="institucion">Institución</Label>
-                  <Input id="institucion" placeholder="Tu institución educativa" className="pl-10 border-tech-primary/30 focus:ring-2 focus:ring-tech-primary/50" />
-                  <GraduationCap className="absolute left-3 top-9 w-5 h-5 text-tech-primary/60" />
+                  <Label htmlFor="institucion" className="text-lg">Institución</Label>
+                  <Input id="institucion" placeholder="Tu institución educativa" className="pl-10 border-tech-primary/30 focus:ring-2 focus:ring-tech-primary/50 text-lg py-3" />
+                  <GraduationCap className="absolute left-3 top-10 w-6 h-6 text-tech-primary/60" />
                 </div>
               </div>
 
               {/* Experiencia */}
               <div className="space-y-2">
-                <Label htmlFor="experiencia">Nivel de Experiencia <span className="text-destructive">*</span></Label>
+                <Label htmlFor="experiencia" className="text-lg">Nivel de Experiencia <span className="text-destructive">*</span></Label>
                 <Select>
-                  <SelectTrigger className="border-tech-primary/30 focus:ring-2 focus:ring-tech-primary/50">
+                  <SelectTrigger className="border-tech-primary/30 focus:ring-2 focus:ring-tech-primary/50 text-lg py-3">
                     <SelectValue placeholder="Selecciona tu nivel" />
                   </SelectTrigger>
                   <SelectContent>
-                    <SelectItem value="principiante">Principiante</SelectItem>
-                    <SelectItem value="intermedio">Intermedio</SelectItem>
-                    <SelectItem value="avanzado">Avanzado</SelectItem>
-                    <SelectItem value="experto">Experto</SelectItem>
+                    <SelectItem value="principiante" className="text-lg">Principiante</SelectItem>
+                    <SelectItem value="intermedio" className="text-lg">Intermedio</SelectItem>
+                    <SelectItem value="avanzado" className="text-lg">Avanzado</SelectItem>
+                    <SelectItem value="experto" className="text-lg">Experto</SelectItem>
                   </SelectContent>
                 </Select>
               </div>
 
               {/* Equipo */}
               <div className="space-y-2 relative">
-                <Label htmlFor="equipo">Nombre del Equipo (Opcional)</Label>
-                <Input id="equipo" placeholder="Si ya tienes equipo, compártenos el nombre" className="pl-10 border-tech-primary/30 focus:ring-2 focus:ring-tech-primary/50" />
-                <Group className="absolute left-3 top-9 w-5 h-5 text-tech-primary/60" />
+                <Label htmlFor="equipo" className="text-lg">Nombre del Equipo (Opcional)</Label>
+                <Input id="equipo" placeholder="Si ya tienes equipo, compártenos el nombre" className="pl-10 border-tech-primary/30 focus:ring-2 focus:ring-tech-primary/50 text-lg py-3" />
+                <Group className="absolute left-3 top-10 w-6 h-6 text-tech-primary/60" />
               </div>
 
               {/* Idea */}
               <div className="space-y-2">
-                <Label htmlFor="idea">Idea de Proyecto (Opcional)</Label>
-                <Textarea id="idea" placeholder="Cuéntanos brevemente tu idea de proyecto" className="border-tech-primary/30 focus:ring-2 focus:ring-tech-primary/50 min-h-[100px]" />
+                <Label htmlFor="idea" className="text-lg">Idea de Proyecto (Opcional)</Label>
+                <Textarea id="idea" placeholder="Cuéntanos brevemente tu idea de proyecto" className="border-tech-primary/30 focus:ring-2 focus:ring-tech-primary/50 min-h-[100px] text-lg" />
               </div>
 
-              <Button className="w-full bg-gradient-to-r from-tech-primary to-tech-secondary hover:from-tech-primary/90 hover:to-tech-secondary/90 text-white font-semibold py-3 shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300">
+              <Button className="w-full bg-gradient-to-r from-tech-primary to-tech-secondary hover:from-tech-primary/90 hover:to-tech-secondary/90 text-white font-semibold py-4 text-xl shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300">
                 Confirmar Registro
               </Button>
             </CardContent>
@@ -126,7 +126,7 @@ export const RegistrationSection = () => {
           <div className="space-y-10">
             {/* Tecsup Gallery */}
             <div>
-              <h3 className="text-3xl font-bold mb-6 bg-gradient-to-r from-tech-secondary to-tech-accent bg-clip-text text-transparent">
+              <h3 className="text-4xl font-bold mb-6 bg-gradient-to-r from-tech-secondary to-tech-accent bg-clip-text text-transparent">
                 El Ambiente en Tecsup
               </h3>
               <div className="grid grid-cols-2 gap-4">
@@ -140,7 +140,7 @@ export const RegistrationSection = () => {
 
             {/* Benefits */}
             <div>
-              <h3 className="text-3xl font-bold mb-6 bg-gradient-to-r from-tech-secondary to-tech-accent bg-clip-text text-transparent">
+              <h3 className="text-4xl font-bold mb-6 bg-gradient-to-r from-tech-secondary to-tech-accent bg-clip-text text-transparent">
                 ¿Qué Incluye?
               </h3>
               <div className="space-y-4">
@@ -152,11 +152,11 @@ export const RegistrationSection = () => {
                       className="flex items-start gap-4 p-4 rounded-lg bg-card/50 border border-tech-primary/10 hover:border-tech-primary/30 transition-all duration-300 hover:bg-tech-primary/5"
                     >
                       <div className="flex-shrink-0 p-2 rounded-full bg-tech-primary/10">
-                        <IconComponent className="w-5 h-5 text-tech-primary" />
+                        <IconComponent className="w-6 h-6 text-tech-primary" />
                       </div>
                       <div>
-                        <h4 className="font-semibold text-foreground mb-1">{benefit.title}</h4>
-                        <p className="text-sm text-muted-foreground">{benefit.description}</p>
+                        <h4 className="font-semibold text-foreground mb-1 text-xl">{benefit.title}</h4>
+                        <p className="text-lg text-muted-foreground">{benefit.description}</p>
                       </div>
                     </div>
                   );
@@ -167,12 +167,12 @@ export const RegistrationSection = () => {
             {/* Call to Action */}
             <Card className="border-tech-accent/30 bg-gradient-to-br from-tech-accent/10 to-tech-secondary/10">
               <CardContent className="p-6 text-center">
-                <CheckCircle className="w-12 h-12 text-tech-accent mx-auto mb-4" />
-                <h4 className="text-xl font-bold mb-2">¡Lugares Limitados!</h4>
-                <p className="text-muted-foreground mb-4">
+                <CheckCircle className="w-14 h-14 text-tech-accent mx-auto mb-4" />
+                <h4 className="text-2xl font-bold mb-2">¡Lugares Limitados!</h4>
+                <p className="text-muted-foreground mb-4 text-lg">
                   Solo 100 participantes tendrán la oportunidad de vivir esta experiencia única.
                 </p>
-                <Badge variant="secondary" className="bg-tech-accent/20 text-tech-accent">
+                <Badge variant="secondary" className="bg-tech-accent/20 text-tech-accent text-lg px-4 py-2">
                   Registro gratuito
                 </Badge>
               </CardContent>

@@ -47,10 +47,10 @@ const CountdownTimer = () => {
         <div key={unit} className="relative group">
           <div className="absolute inset-0 bg-gradient-to-br from-purple-600/20 to-blue-600/20 rounded-xl blur-xl group-hover:blur-2xl transition-all duration-300"></div>
           <div className="relative bg-white dark:bg-gray-900 p-3 sm:p-4 rounded-xl border border-purple-500/20 group-hover:border-purple-500/40 transition-all duration-300">
-            <div className="text-2xl sm:text-3xl md:text-4xl font-bold bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
+            <div className="text-3xl sm:text-4xl md:text-5xl font-bold bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
               {String(value).padStart(2, "0")}
             </div>
-            <div className="text-xs sm:text-sm text-gray-600 dark:text-gray-400 capitalize mt-1">{unit}</div>
+            <div className="text-base sm:text-lg text-gray-600 dark:text-gray-400 capitalize mt-1">{unit}</div>
           </div>
         </div>
       ))}
@@ -87,7 +87,7 @@ const FloatingParticles = () => (
 
 export const HeroSection = () => {
   return (
-    <section className="min-h-screen bg-white dark:bg-black relative overflow-hidden transition-colors duration-500">
+    <section id="hero" className="min-h-screen bg-white dark:bg-black relative overflow-hidden transition-colors duration-500">
       {/* 🌌 Background Layers */}
       <div className="absolute inset-0">
         <div className="absolute inset-0 bg-gradient-to-br from-purple-900/20 via-transparent to-blue-900/20 dark:from-purple-900/30 dark:to-blue-900/30"></div>
@@ -107,7 +107,7 @@ export const HeroSection = () => {
           <div className="text-center lg:text-left space-y-8 lg:space-y-10">
             <div className="inline-flex items-center gap-3 px-5 py-2.5 rounded-full bg-gradient-to-r from-purple-600/10 to-blue-600/10 border border-purple-500/30 backdrop-blur-xl animate-pulse-glow">
               <Zap className="w-5 h-5 text-purple-400 animate-pulse" />
-              <span className="text-sm font-semibold bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
+              <span className="text-lg font-semibold bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
                 EVENTO OFICIAL TECSUP 2025
               </span>
               <Star className="w-4 h-4 text-blue-400 animate-pulse" />
@@ -115,16 +115,16 @@ export const HeroSection = () => {
 
             {/* 🔹 Title */}
             <h1>
-              <span className="text-5xl sm:text-7xl md:text-8xl lg:text-9xl font-black bg-gradient-to-r from-purple-400 via-blue-400 to-cyan-400 bg-clip-text text-transparent animate-gradient leading-none">
+              <span className="text-6xl sm:text-8xl md:text-9xl lg:text-[10rem] font-black bg-gradient-to-r from-purple-400 via-blue-400 to-cyan-400 bg-clip-text text-transparent animate-gradient leading-none">
                 HACKATHON
               </span>
-              <span className="block text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-extralight bg-gradient-to-r from-cyan-400 via-purple-400 to-blue-400 bg-clip-text text-transparent animate-gradient mt-2">
+              <span className="block text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-extralight bg-gradient-to-r from-cyan-400 via-purple-400 to-blue-400 bg-clip-text text-transparent animate-gradient mt-2">
                 2025
               </span>
             </h1>
 
             {/* 🔹 Description */}
-            <p className="text-xl sm:text-2xl md:text-3xl text-gray-700 dark:text-gray-300 leading-relaxed">
+            <p className="text-2xl sm:text-3xl md:text-4xl text-gray-700 dark:text-gray-300 leading-relaxed">
               El desafío tecnológico más{" "}
               <span className="font-bold bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent animate-pulse">
                 ÉPICO
@@ -135,31 +135,31 @@ export const HeroSection = () => {
             {/* 🔹 Stats */}
             <div className="grid grid-cols-3 gap-6 py-8">
               <div className="relative bg-white dark:bg-gray-900 p-4 rounded-2xl shadow border border-purple-500/20">
-                <Users className="w-6 h-6 text-purple-400 mb-2 mx-auto" />
-                <div className="text-3xl font-bold bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
+                <Users className="w-8 h-8 text-purple-400 mb-2 mx-auto" />
+                <div className="text-4xl font-bold bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
                   <AnimatedCounter end={200} suffix="+" />
                 </div>
-                <p className="text-sm text-gray-600 dark:text-gray-400">Participantes</p>
+                <p className="text-lg text-gray-600 dark:text-gray-400">Participantes</p>
               </div>
               <div className="relative bg-white dark:bg-gray-900 p-4 rounded-2xl shadow border border-blue-500/20">
-                <Code className="w-6 h-6 text-blue-400 mb-2 mx-auto" />
-                <div className="text-3xl font-bold bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
+                <Code className="w-8 h-8 text-blue-400 mb-2 mx-auto" />
+                <div className="text-4xl font-bold bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
                   <AnimatedCounter end={48} suffix="h" />
                 </div>
-                <p className="text-sm text-gray-600 dark:text-gray-400">Desarrollo</p>
+                <p className="text-lg text-gray-600 dark:text-gray-400">Desarrollo</p>
               </div>
               <div className="relative bg-white dark:bg-gray-900 p-4 rounded-2xl shadow border border-cyan-500/20">
-                <Trophy className="w-6 h-6 text-cyan-400 mb-2 mx-auto" />
-                <div className="text-3xl font-bold bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
+                <Trophy className="w-8 h-8 text-cyan-400 mb-2 mx-auto" />
+                <div className="text-4xl font-bold bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
                   <AnimatedCounter end={50} suffix="K" />
                 </div>
-                <p className="text-sm text-gray-600 dark:text-gray-400">en Premios</p>
+                <p className="text-lg text-gray-600 dark:text-gray-400">en Premios</p>
               </div>
             </div>
 
             {/* 🔹 Countdown */}
             <div className="relative p-6 rounded-3xl bg-white/70 dark:bg-gray-900/40 backdrop-blur-xl border border-purple-500/20">
-              <p className="text-center text-sm text-gray-600 dark:text-gray-400 mb-4 font-medium">
+              <p className="text-center text-lg text-gray-600 dark:text-gray-400 mb-4 font-medium">
                 COMIENZA EN
               </p>
               <CountdownTimer />
