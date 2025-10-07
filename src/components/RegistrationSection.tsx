@@ -1,13 +1,8 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import { Textarea } from "@/components/ui/textarea";
 import { Badge } from "@/components/ui/badge";
 import { 
-  CheckCircle, Users, Coffee, Lightbulb, Network, Award, Clock, 
-  Mail, Phone, GraduationCap, User, Group 
+  CheckCircle, Users, Coffee, Lightbulb, Network, Award, Clock
 } from "lucide-react";
 
 export const RegistrationSection = () => {
@@ -20,24 +15,16 @@ export const RegistrationSection = () => {
     { icon: Award, title: "Certificado de participación oficial", description: "Añade valor a tu perfil profesional" }
   ];
 
-  const gallery = [
-    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTJs3U2cd6p7Ll1sDLASehQDuiHc1N2QgBoOg&s",
-    "https://elbuho.pe/wp-content/uploads/2024/02/nasa-hackathon-Space-Apps-Challenge-arequipa-tecsup-ucsp.jpg",
-    "https://www.tecsup.edu.pe/wp-content/uploads/2024/09/sede-trujillo-nf.png",
-    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQv8LLrhquMstSMz_07cnvwITOp_UP6aQ8eXA&s"
-  ];
-   
-
   return (
-    <section id="registro" className="py-24 bg-gradient-to-br from-background via-tech-primary/5 to-tech-secondary/5 relative overflow-hidden">
+    <section id="registro" className="py-24 bg-gradient-to-br from-background via-blue-500/5 to-purple-500/5 relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Header */}
         <div className="text-center mb-16">
-          <Badge variant="secondary" className="mb-4 bg-tech-primary/10 text-tech-primary hover:bg-tech-primary/20 text-lg px-4 py-2">
+          <Badge variant="secondary" className="mb-4 bg-blue-500/10 text-blue-600 hover:bg-blue-500/20 text-lg px-4 py-2">
             ¡Únete al Hackathon!
           </Badge>
-          <h2 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-tech-primary via-tech-secondary to-tech-accent bg-clip-text text-transparent mb-6">
+          <h2 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent mb-6">
             Formulario de Registro
           </h2>
           <p className="text-2xl text-muted-foreground max-w-3xl mx-auto">
@@ -48,99 +35,52 @@ export const RegistrationSection = () => {
 
         <div className="grid lg:grid-cols-2 gap-12 items-start">
           
-          {/* Registration Form */}
-          <Card className="border-tech-primary/20 shadow-2xl backdrop-blur-sm">
-            <CardHeader>
-              <CardTitle className="text-3xl font-bold text-tech-primary">
+          {/* Embedded Google Form */}
+          <Card className="border-blue-500/20 shadow-2xl backdrop-blur-sm overflow-hidden bg-card dark:bg-card/95">
+            <CardHeader className="bg-gradient-to-r from-blue-500/10 to-purple-500/10 dark:from-blue-500/20 dark:to-purple-500/20">
+              <CardTitle className="text-3xl font-bold text-blue-600 dark:text-blue-400">
                 Datos de Registro
               </CardTitle>
-              <CardDescription className="text-lg">
-                Completa la información requerida para tu participación
+              <CardDescription className="text-lg text-muted-foreground dark:text-muted-foreground">
+                Completa el formulario oficial de Google Forms
               </CardDescription>
             </CardHeader>
-            <CardContent className="space-y-6">
-              {/* Nombre y Email */}
-              <div className="grid md:grid-cols-2 gap-4">
-                <div className="space-y-2 relative">
-                  <Label htmlFor="nombre" className="text-lg">Nombre Completo <span className="text-destructive">*</span></Label>
-                  <Input id="nombre" placeholder="Tu nombre completo" className="pl-10 border-tech-primary/30 focus:ring-2 focus:ring-tech-primary/50 text-lg py-3" />
-                  <User className="absolute left-3 top-10 w-6 h-6 text-tech-primary/60" />
-                </div>
-                <div className="space-y-2 relative">
-                  <Label htmlFor="email" className="text-lg">Email <span className="text-destructive">*</span></Label>
-                  <Input id="email" type="email" placeholder="tu@email.com" className="pl-10 border-tech-primary/30 focus:ring-2 focus:ring-tech-primary/50 text-lg py-3" />
-                  <Mail className="absolute left-3 top-10 w-6 h-6 text-tech-primary/60" />
-                </div>
+            <CardContent className="p-0">
+              <div className="relative w-full bg-white dark:bg-gray-900/50" style={{ height: '800px' }}>
+                <iframe 
+                  src="https://docs.google.com/forms/d/1FCJlcKkFrHYLZWw0V4P9SXuEqv98z-jLjvoj2S9b_-c/viewform?embedded=true"
+                  width="100%" 
+                  height="100%"
+                  frameBorder="0" 
+                  marginHeight={0} 
+                  marginWidth={0}
+                  className="border-0 dark:opacity-95"
+                  title="Formulario de Registro Hackathon Tecsup 2025"
+                >
+                  Cargando…
+                </iframe>
               </div>
-
-              {/* Teléfono e Institución */}
-              <div className="grid md:grid-cols-2 gap-4">
-                <div className="space-y-2 relative">
-                  <Label htmlFor="telefono" className="text-lg">Teléfono <span className="text-destructive">*</span></Label>
-                  <Input id="telefono" placeholder="+51 999 999 999" className="pl-10 border-tech-primary/30 focus:ring-2 focus:ring-tech-primary/50 text-lg py-3" />
-                  <Phone className="absolute left-3 top-10 w-6 h-6 text-tech-primary/60" />
-                </div>
-                <div className="space-y-2 relative">
-                  <Label htmlFor="institucion" className="text-lg">Institución</Label>
-                  <Input id="institucion" placeholder="Tu institución educativa" className="pl-10 border-tech-primary/30 focus:ring-2 focus:ring-tech-primary/50 text-lg py-3" />
-                  <GraduationCap className="absolute left-3 top-10 w-6 h-6 text-tech-primary/60" />
-                </div>
+              <div className="p-6 bg-gradient-to-r from-blue-500/5 to-purple-500/5 dark:from-blue-500/10 dark:to-purple-500/10">
+                <p className="text-center text-muted-foreground dark:text-muted-foreground text-sm">
+                  ¿Problemas con el formulario?{" "}
+                  <a 
+                    href="https://docs.google.com/forms/d/1FCJlcKkFrHYLZWw0V4P9SXuEqv98z-jLjvoj2S9b_-c/viewform" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="text-blue-600 hover:text-purple-600 dark:text-blue-400 dark:hover:text-purple-400 font-semibold underline"
+                  >
+                    Ábrelo en una nueva ventana
+                  </a>
+                </p>
               </div>
-
-              {/* Experiencia */}
-              <div className="space-y-2">
-                <Label htmlFor="experiencia" className="text-lg">Nivel de Experiencia <span className="text-destructive">*</span></Label>
-                <Select>
-                  <SelectTrigger className="border-tech-primary/30 focus:ring-2 focus:ring-tech-primary/50 text-lg py-3">
-                    <SelectValue placeholder="Selecciona tu nivel" />
-                  </SelectTrigger>
-                  <SelectContent>
-                    <SelectItem value="principiante" className="text-lg">Principiante</SelectItem>
-                    <SelectItem value="intermedio" className="text-lg">Intermedio</SelectItem>
-                    <SelectItem value="avanzado" className="text-lg">Avanzado</SelectItem>
-                    <SelectItem value="experto" className="text-lg">Experto</SelectItem>
-                  </SelectContent>
-                </Select>
-              </div>
-
-              {/* Equipo */}
-              <div className="space-y-2 relative">
-                <Label htmlFor="equipo" className="text-lg">Nombre del Equipo (Opcional)</Label>
-                <Input id="equipo" placeholder="Si ya tienes equipo, compártenos el nombre" className="pl-10 border-tech-primary/30 focus:ring-2 focus:ring-tech-primary/50 text-lg py-3" />
-                <Group className="absolute left-3 top-10 w-6 h-6 text-tech-primary/60" />
-              </div>
-
-              {/* Idea */}
-              <div className="space-y-2">
-                <Label htmlFor="idea" className="text-lg">Idea de Proyecto (Opcional)</Label>
-                <Textarea id="idea" placeholder="Cuéntanos brevemente tu idea de proyecto" className="border-tech-primary/30 focus:ring-2 focus:ring-tech-primary/50 min-h-[100px] text-lg" />
-              </div>
-
-              <Button className="w-full bg-gradient-to-r from-tech-primary to-tech-secondary hover:from-tech-primary/90 hover:to-tech-secondary/90 text-white font-semibold py-4 text-xl shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300">
-                Confirmar Registro
-              </Button>
             </CardContent>
           </Card>
 
-          {/* Gallery + Benefits */}
+          {/* Benefits and CTA */}
           <div className="space-y-10">
-            {/* Tecsup Gallery */}
-            <div>
-              <h3 className="text-4xl font-bold mb-6 bg-gradient-to-r from-tech-secondary to-tech-accent bg-clip-text text-transparent">
-                El Ambiente en Tecsup
-              </h3>
-              <div className="grid grid-cols-2 gap-4">
-                {gallery.map((img, i) => (
-                  <div key={i} className="relative group overflow-hidden rounded-xl shadow-lg">
-                    <img src={img} alt={`Tecsup ${i+1}`} className="w-full h-40 object-cover group-hover:scale-110 transition-transform duration-500" />
-                  </div>
-                ))}
-              </div>
-            </div>
-
             {/* Benefits */}
             <div>
-              <h3 className="text-4xl font-bold mb-6 bg-gradient-to-r from-tech-secondary to-tech-accent bg-clip-text text-transparent">
+              <h3 className="text-4xl font-bold mb-6 bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
                 ¿Qué Incluye?
               </h3>
               <div className="space-y-4">
@@ -149,14 +89,14 @@ export const RegistrationSection = () => {
                   return (
                     <div 
                       key={index}
-                      className="flex items-start gap-4 p-4 rounded-lg bg-card/50 border border-tech-primary/10 hover:border-tech-primary/30 transition-all duration-300 hover:bg-tech-primary/5"
+                      className="flex items-start gap-4 p-4 rounded-lg bg-card/50 dark:bg-card/30 border border-blue-500/10 dark:border-blue-500/20 hover:border-blue-500/30 dark:hover:border-blue-500/40 transition-all duration-300 hover:bg-blue-500/5 dark:hover:bg-blue-500/10"
                     >
-                      <div className="flex-shrink-0 p-2 rounded-full bg-tech-primary/10">
-                        <IconComponent className="w-6 h-6 text-tech-primary" />
+                      <div className="flex-shrink-0 p-2 rounded-full bg-blue-500/10 dark:bg-blue-500/20">
+                        <IconComponent className="w-6 h-6 text-blue-600 dark:text-blue-400" />
                       </div>
                       <div>
-                        <h4 className="font-semibold text-foreground mb-1 text-xl">{benefit.title}</h4>
-                        <p className="text-lg text-muted-foreground">{benefit.description}</p>
+                        <h4 className="font-semibold text-foreground dark:text-foreground mb-1 text-xl">{benefit.title}</h4>
+                        <p className="text-lg text-muted-foreground dark:text-muted-foreground">{benefit.description}</p>
                       </div>
                     </div>
                   );
@@ -165,16 +105,23 @@ export const RegistrationSection = () => {
             </div>
 
             {/* Call to Action */}
-            <Card className="border-tech-accent/30 bg-gradient-to-br from-tech-accent/10 to-tech-secondary/10">
+            <Card className="border-pink-500/30 dark:border-pink-500/40 bg-gradient-to-br from-pink-500/10 to-purple-500/10 dark:from-pink-500/20 dark:to-purple-500/20">
               <CardContent className="p-6 text-center">
-                <CheckCircle className="w-14 h-14 text-tech-accent mx-auto mb-4" />
-                <h4 className="text-2xl font-bold mb-2">¡Lugares Limitados!</h4>
-                <p className="text-muted-foreground mb-4 text-lg">
+                <CheckCircle className="w-14 h-14 text-pink-600 dark:text-pink-400 mx-auto mb-4" />
+                <h4 className="text-2xl font-bold mb-2 text-foreground dark:text-foreground">¡Lugares Limitados!</h4>
+                <p className="text-muted-foreground dark:text-muted-foreground mb-4 text-lg">
                   Solo 100 participantes tendrán la oportunidad de vivir esta experiencia única.
                 </p>
-                <Badge variant="secondary" className="bg-tech-accent/20 text-tech-accent text-lg px-4 py-2">
-                  Registro gratuito
-                </Badge>
+                <a 
+                  href="https://docs.google.com/forms/d/1FCJlcKkFrHYLZWw0V4P9SXuEqv98z-jLjvoj2S9b_-c/viewform" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="inline-block"
+                >
+                  <Badge variant="secondary" className="bg-pink-500/20 dark:bg-pink-500/30 text-pink-600 dark:text-pink-400 text-lg px-6 py-3 cursor-pointer hover:bg-pink-500/30 dark:hover:bg-pink-500/40 transition-all duration-300 hover:scale-105">
+                    Registro gratuito →
+                  </Badge>
+                </a>
               </CardContent>
             </Card>
           </div>

@@ -1,4 +1,5 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
 import {
   Users,
   Calendar,
@@ -7,6 +8,9 @@ import {
   Trophy,
   FileText,
   CheckCircle2,
+  ExternalLink,
+  BookOpen,
+  CalendarDays,
 } from "lucide-react";
 
 const rules = [
@@ -108,6 +112,75 @@ export const RulesSection = () => {
           </p>
         </div>
 
+        {/* Document Links Section */}
+        <div className="grid md:grid-cols-2 gap-8 mb-24">
+          {/* Bases Document */}
+          <a 
+            href="https://docs.google.com/document/d/1sxQaXx7SXnkUOTdPtBYR5MzeeHMmdJjlhiMJWPytle8/edit?tab=t.0" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="block"
+          >
+            <Card className="group h-full border-2 border-blue-500/20 dark:border-blue-400/20 bg-white/80 dark:bg-gray-900/80 backdrop-blur-md rounded-2xl hover:shadow-2xl hover:shadow-blue-500/20 dark:hover:shadow-blue-400/20 transition-all duration-500 hover:scale-105 cursor-pointer">
+              <CardHeader className="text-center pb-6">
+                <div className="inline-flex items-center justify-center w-24 h-24 bg-gradient-to-br from-blue-500 to-blue-600 dark:from-blue-400 dark:to-blue-500 rounded-2xl mb-6 group-hover:rotate-6 transition-transform duration-500 mx-auto">
+                  <BookOpen className="w-12 h-12 text-white" />
+                </div>
+                <CardTitle className="text-3xl font-bold text-gray-900 dark:text-white mb-3">
+                  Bases Completas
+                </CardTitle>
+                <p className="text-gray-600 dark:text-gray-300 text-lg">
+                  Documento oficial con todas las reglas y condiciones del hackathon
+                </p>
+              </CardHeader>
+              <CardContent className="text-center pb-8">
+                <div className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white font-semibold px-8 py-4 rounded-lg text-lg shadow-lg hover:shadow-xl transform group-hover:scale-105 transition-all duration-300">
+                  Ver Bases Completas
+                  <ExternalLink className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                </div>
+                <div className="mt-4">
+                  <Badge variant="secondary" className="bg-blue-500/10 dark:bg-blue-400/10 text-blue-600 dark:text-blue-400 px-4 py-2">
+                    Documento Google Docs
+                  </Badge>
+                </div>
+              </CardContent>
+            </Card>
+          </a>
+
+          {/* Cronograma Document */}
+          <a 
+            href="https://docs.google.com/spreadsheets/d/1ZE3D8Y_iABt8GFUIRPXHAUeRDlyCTao8yyqCpXiInOI/edit?gid=273729676#gid=273729676" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="block"
+          >
+            <Card className="group h-full border-2 border-emerald-500/20 dark:border-emerald-400/20 bg-white/80 dark:bg-gray-900/80 backdrop-blur-md rounded-2xl hover:shadow-2xl hover:shadow-emerald-500/20 dark:hover:shadow-emerald-400/20 transition-all duration-500 hover:scale-105 cursor-pointer">
+              <CardHeader className="text-center pb-6">
+                <div className="inline-flex items-center justify-center w-24 h-24 bg-gradient-to-br from-emerald-500 to-emerald-600 dark:from-emerald-400 dark:to-emerald-500 rounded-2xl mb-6 group-hover:rotate-6 transition-transform duration-500 mx-auto">
+                  <CalendarDays className="w-12 h-12 text-white" />
+                </div>
+                <CardTitle className="text-3xl font-bold text-gray-900 dark:text-white mb-3">
+                  Cronograma 2025
+                </CardTitle>
+                <p className="text-gray-600 dark:text-gray-300 text-lg">
+                  Calendario detallado con todas las fechas y actividades del evento
+                </p>
+              </CardHeader>
+              <CardContent className="text-center pb-8">
+                <div className="inline-flex items-center gap-2 bg-gradient-to-r from-emerald-500 to-emerald-600 hover:from-emerald-600 hover:to-emerald-700 text-white font-semibold px-8 py-4 rounded-lg text-lg shadow-lg hover:shadow-xl transform group-hover:scale-105 transition-all duration-300">
+                  Ver Cronograma
+                  <ExternalLink className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                </div>
+                <div className="mt-4">
+                  <Badge variant="secondary" className="bg-emerald-500/10 dark:bg-emerald-400/10 text-emerald-600 dark:text-emerald-400 px-4 py-2">
+                    Google Sheets
+                  </Badge>
+                </div>
+              </CardContent>
+            </Card>
+          </a>
+        </div>
+
         {/* Rules */}
         <div className="mb-24">
           <h3 className="text-5xl font-bold text-center mb-12 text-gray-900 dark:text-white">
@@ -116,17 +189,15 @@ export const RulesSection = () => {
           <div className="grid lg:grid-cols-3 gap-8">
             {rules.map((rule, index) => {
               const colorClasses = getColorClasses(rule.color);
+              const RuleIcon = rule.icon;
               return (
                 <Card
                   key={index}
                   className="group relative border border-gray-200/50 dark:border-gray-700/50 bg-white/60 dark:bg-gray-900/60 backdrop-blur-md rounded-2xl 
                     transition-all duration-500 hover:scale-105 active:scale-95
                     hover:shadow-[0_0_25px_rgba(99,102,241,0.4)] dark:hover:shadow-[0_0_25px_rgba(147,197,253,0.4)] 
-                    active:shadow-[0_0_35px_rgba(99,102,241,0.6)] dark:active:shadow-[0_0_35px_rgba(147,197,253,0.6)]
-                    animate-fade-in-up cursor-pointer"
-                  style={{ animationDelay: `${index * 0.15}s` }}
+                    cursor-pointer"
                 >
-                  {/* Glow border */}
                   <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-blue-500/10 dark:from-blue-400/10 via-emerald-500/10 dark:via-emerald-400/10 to-purple-500/10 dark:to-purple-400/10 opacity-0 group-hover:opacity-100 blur-md transition-opacity duration-500"></div>
 
                   <CardHeader className="text-center pb-4 relative z-10">
@@ -134,7 +205,7 @@ export const RulesSection = () => {
                       className={`inline-flex items-center justify-center w-20 h-20 ${colorClasses.bg} ${colorClasses.text} rounded-2xl mb-5 
                         group-hover:scale-110 group-hover:rotate-6 transition-all duration-500`}
                     >
-                      <rule.icon className="w-10 h-10" />
+                      <RuleIcon className="w-10 h-10" />
                     </div>
                     <CardTitle className="text-2xl font-bold text-gray-900 dark:text-white group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors duration-300">
                       {rule.title}
