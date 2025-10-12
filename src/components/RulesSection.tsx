@@ -18,21 +18,21 @@ const rules = [
     icon: Users,
     title: "Formación de Equipos",
     description:
-      "Equipos de 2 a 4 integrantes. Puedes venir con tu equipo formado o formar uno durante el evento.",
+      "Equipos de 2 a 4 integrantes. Puedes venir con tu equipo formado o formar uno durante el evento. Participación individual o equipos formados con un máximo de 5 integrantes, de acuerdo a lo indicado en las bases.",
     color: "blue",
   },
   {
     icon: Calendar,
     title: "Elegibilidad",
     description:
-      "Estudiantes universitarios, técnicos y profesionales menores de 30 años pueden participar.",
+      "Estudiantes universitarios, técnicos y profesionales menores de 30 años pueden participar. Estudiantes de universidades, institutos técnicos o escuelas de formación profesional de grado superior, matriculados en el año académico 2025 a nivel nacional.",
     color: "purple",
   },
   {
     icon: Code,
     title: "Desarrollo",
     description:
-      "El código debe ser desarrollado durante las 48 horas del evento. No se aceptan proyectos previos.",
+      "El código debe ser desarrollado durante las 48 horas del evento. No se aceptan proyectos previos. Las propuestas deberán ser originales, que no hayan sido premiadas anteriormente, ya sea en un evento similar o cualquier otro concurso.",
     color: "emerald",
   },
   {
@@ -74,16 +74,16 @@ export const RulesSection = () => {
     const colorMap = {
       blue: {
         bg: "bg-blue-500/10 dark:bg-blue-400/10",
-        text: "text-blue-600 dark:text-blue-400"
+        text: "text-blue-600 dark:text-blue-400",
       },
       purple: {
         bg: "bg-purple-500/10 dark:bg-purple-400/10",
-        text: "text-purple-600 dark:text-purple-400"
+        text: "text-purple-600 dark:text-purple-400",
       },
       emerald: {
         bg: "bg-emerald-500/10 dark:bg-emerald-400/10",
-        text: "text-emerald-600 dark:text-emerald-400"
-      }
+        text: "text-emerald-600 dark:text-emerald-400",
+      },
     };
     return colorMap[color] || colorMap.blue;
   };
@@ -107,7 +107,9 @@ export const RulesSection = () => {
           </h2>
           <p className="text-2xl md:text-3xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto leading-relaxed">
             Todo lo que necesitas saber para participar en el hackathon más{" "}
-            <span className="text-emerald-600 dark:text-emerald-400 font-semibold">emocionante</span>{" "}
+            <span className="text-emerald-600 dark:text-emerald-400 font-semibold">
+              emocionante
+            </span>{" "}
             del año.
           </p>
         </div>
@@ -115,9 +117,9 @@ export const RulesSection = () => {
         {/* Document Links Section */}
         <div className="grid md:grid-cols-2 gap-8 mb-24">
           {/* Bases Document */}
-          <a 
-            href="https://docs.google.com/document/d/1sxQaXx7SXnkUOTdPtBYR5MzeeHMmdJjlhiMJWPytle8/edit?tab=t.0" 
-            target="_blank" 
+          <a
+            href="https://docs.google.com/document/d/1sxQaXx7SXnkUOTdPtBYR5MzeeHMmdJjlhiMJWPytle8/edit?tab=t.0"
+            target="_blank"
             rel="noopener noreferrer"
             className="block"
           >
@@ -139,7 +141,10 @@ export const RulesSection = () => {
                   <ExternalLink className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </div>
                 <div className="mt-4">
-                  <Badge variant="secondary" className="bg-blue-500/10 dark:bg-blue-400/10 text-blue-600 dark:text-blue-400 px-4 py-2">
+                  <Badge
+                    variant="secondary"
+                    className="bg-blue-500/10 dark:bg-blue-400/10 text-blue-600 dark:text-blue-400 px-4 py-2"
+                  >
                     Documento Google Docs
                   </Badge>
                 </div>
@@ -148,9 +153,9 @@ export const RulesSection = () => {
           </a>
 
           {/* Cronograma Document */}
-          <a 
-            href="https://docs.google.com/spreadsheets/d/1ZE3D8Y_iABt8GFUIRPXHAUeRDlyCTao8yyqCpXiInOI/edit?gid=273729676#gid=273729676" 
-            target="_blank" 
+          <a
+            href="https://docs.google.com/spreadsheets/d/1ZE3D8Y_iABt8GFUIRPXHAUeRDlyCTao8yyqCpXiInOI/edit?gid=273729676#gid=273729676"
+            target="_blank"
             rel="noopener noreferrer"
             className="block"
           >
@@ -172,7 +177,10 @@ export const RulesSection = () => {
                   <ExternalLink className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </div>
                 <div className="mt-4">
-                  <Badge variant="secondary" className="bg-emerald-500/10 dark:bg-emerald-400/10 text-emerald-600 dark:text-emerald-400 px-4 py-2">
+                  <Badge
+                    variant="secondary"
+                    className="bg-emerald-500/10 dark:bg-emerald-400/10 text-emerald-600 dark:text-emerald-400 px-4 py-2"
+                  >
                     Google Sheets
                   </Badge>
                 </div>

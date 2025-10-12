@@ -1,12 +1,12 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { 
-  Bot, 
-  AlertCircle, 
-  GraduationCap, 
-  Heart, 
-  Users, 
+import {
+  Bot,
+  AlertCircle,
+  GraduationCap,
+  Heart,
+  Users,
   Route,
   Sparkles,
   Lightbulb,
@@ -100,14 +100,14 @@ export const ChallengesSection = () => {
             <Target className="w-5 h-5 text-blue-600 dark:text-blue-400" />
             <span className="text-base sm:text-lg font-medium text-blue-600 dark:text-blue-400">Desafíos EduHack 2025</span>
           </div>
-          
+
           <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black bg-gradient-to-r from-gray-900 dark:from-white via-blue-600 dark:via-blue-400 to-gray-900 dark:to-white bg-clip-text text-transparent mb-6 leading-tight">
             Educación Superior sin
             <span className="block text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold bg-gradient-to-r from-blue-600 dark:from-blue-400 via-emerald-600 dark:via-emerald-400 to-purple-600 dark:to-purple-400 bg-clip-text text-transparent mt-2">
               Deserción Estudiantil
             </span>
           </h2>
-          
+
           <p className="text-xl sm:text-2xl md:text-2xl lg:text-3xl text-gray-700 dark:text-gray-300 max-w-4xl mx-auto leading-relaxed font-light">
             Desarrolla soluciones con <span className="text-blue-600 dark:text-blue-400 font-semibold">agentes de IA</span> para
             reducir la deserción estudiantil y transformar el <span className="text-emerald-600 dark:text-emerald-400 font-semibold">futuro de la educación superior</span>.
@@ -119,7 +119,7 @@ export const ChallengesSection = () => {
           {challenges.map((challenge, index) => {
             const ChallengeIcon = challenge.icon;
             return (
-              <Card 
+              <Card
                 key={index}
                 className={`group relative border-0 bg-gradient-to-br ${challenge.bgGradient} backdrop-blur-md hover:scale-105 hover:-translate-y-3 transition-all duration-500 hover:shadow-2xl hover:shadow-blue-500/15 dark:hover:shadow-blue-400/15 border ${challenge.borderColor}`}
               >
@@ -131,16 +131,16 @@ export const ChallengesSection = () => {
                     {challenge.title}
                   </CardTitle>
                 </CardHeader>
-                
+
                 <CardContent className="text-center space-y-4 sm:space-y-6">
                   <p className="text-base sm:text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
                     {challenge.description}
                   </p>
-                  
+
                   <div className="flex flex-wrap gap-2 justify-center">
                     {challenge.tags.map((tag, tagIndex) => (
-                      <Badge 
-                        key={tagIndex} 
+                      <Badge
+                        key={tagIndex}
                         variant="secondary"
                         className="text-xs sm:text-sm bg-white/40 dark:bg-white/20 text-gray-900 dark:text-white hover:bg-white/50 dark:hover:bg-white/30 transition-all duration-200 border-white/30 dark:border-white/30 px-2 sm:px-3 py-1"
                       >
@@ -166,18 +166,18 @@ export const ChallengesSection = () => {
               <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-6">
                 El Poder de los Agentes de IA
               </h3>
-              
+
               <p className="text-base sm:text-lg md:text-xl text-gray-700 dark:text-gray-300 mb-6 max-w-3xl mx-auto leading-relaxed">
-                La deserción estudiantil es uno de los mayores retos de la educación superior, impactando el futuro de miles de jóvenes. 
-                Las principales causas incluyen <span className="font-semibold text-red-600 dark:text-red-400">dificultades académicas</span>, 
-                <span className="font-semibold text-purple-600 dark:text-purple-400"> emocionales</span>, 
-                <span className="font-semibold text-blue-600 dark:text-blue-400"> sociales</span> y 
+                La deserción estudiantil es uno de los mayores retos de la educación superior, impactando el futuro de miles de jóvenes.
+                Las principales causas incluyen <span className="font-semibold text-red-600 dark:text-red-400">dificultades académicas</span>,
+                <span className="font-semibold text-purple-600 dark:text-purple-400"> emocionales</span>,
+                <span className="font-semibold text-blue-600 dark:text-blue-400"> sociales</span> y
                 <span className="font-semibold text-emerald-600 dark:text-emerald-400"> económicas</span>.
               </p>
 
               <p className="text-base sm:text-lg md:text-xl text-gray-700 dark:text-gray-300 max-w-3xl mx-auto leading-relaxed">
-                Tu misión es desarrollar herramientas que brinden <span className="text-blue-600 dark:text-blue-400 font-semibold">acompañamiento</span>, 
-                detecten <span className="text-red-600 dark:text-red-400 font-semibold">riesgos tempranos</span> y 
+                Tu misión es desarrollar herramientas que brinden <span className="text-blue-600 dark:text-blue-400 font-semibold">acompañamiento</span>,
+                detecten <span className="text-red-600 dark:text-red-400 font-semibold">riesgos tempranos</span> y
                 fortalezcan la <span className="text-emerald-600 dark:text-emerald-400 font-semibold">permanencia estudiantil</span>.
               </p>
             </div>
@@ -196,7 +196,7 @@ export const ChallengesSection = () => {
               <h3 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold bg-gradient-to-r from-gray-800 dark:from-gray-200 via-purple-600 dark:via-purple-400 to-gray-900 dark:to-white bg-clip-text text-transparent mb-6 sm:mb-8">
                 ¿Tienes otra solución innovadora?
               </h3>
-              
+
               <p className="text-lg sm:text-xl md:text-2xl text-gray-700 dark:text-gray-300 mb-8 sm:mb-10 max-w-2xl mx-auto leading-relaxed">
                 Si tu propuesta con <span className="text-blue-600 dark:text-blue-400 font-semibold">agentes de IA</span> no
                 encaja exactamente en estos desafíos pero aborda la deserción estudiantil,
