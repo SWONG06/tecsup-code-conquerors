@@ -7,17 +7,17 @@ import {
 
 export const RegistrationSection = () => {
   const benefits = [
-    { icon: Clock, title: "Acceso completo al evento de 48 horas", description: "Participa en toda la experiencia del hackathon" },
-    { icon: Coffee, title: "Comidas y refrigerios incluidos", description: "Mantente energizado durante todo el evento" },
-    { icon: Users, title: "Mentoría de expertos de la industria", description: "Recibe guidance de profesionales experimentados" },
-    { icon: Lightbulb, title: "Acceso a herramientas y tecnologías premium", description: "Utiliza las mejores herramientas del mercado" },
-    { icon: Network, title: "Networking con profesionales tech", description: "Conecta con líderes de la industria" },
-    { icon: Award, title: "Certificado de participación oficial", description: "Añade valor a tu perfil profesional" }
+    { icon: Clock, title: "Acceso completo al evento de 48 horas", description: "Participa en toda la experiencia de la EduHack 2025" },
+    { icon: Users, title: "Mentoría de expertos en el sector", description: "Recibe talleres de profesionales experimentados" },
+    { icon: Network, title: "Networking con estudiantes", description: "Conecta con estudiantes de otras instituciones" },
+    { icon: Lightbulb, title: "Oportunidad de ganar premios", description: "Compite por premios emocionantes y reconocimientos" },
+    { icon: Coffee, title: "Comida y bebidas gratuitas", description: "Mantente energizado con snacks y bebidas durante el evento" },
+    { icon: Award, title: "Certificado de participación", description: "Recibe un certificado oficial al completar el hackathon" },
   ];
 
   return (
     <section id="registro" className="py-24 bg-gradient-to-br from-background via-blue-500/5 to-purple-500/5 relative overflow-hidden">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></div>
         
         {/* Header */}
         <div className="text-center mb-16">
@@ -29,7 +29,7 @@ export const RegistrationSection = () => {
           </h2>
           <p className="text-2xl text-muted-foreground max-w-3xl mx-auto">
             Regístrate ahora y asegura tu lugar en el evento tecnológico más importante del año.
-            Completa tus datos para participar en el Hackathon Tecsup 2025.
+            Completa tus datos para participar en el EduHack 2025 de Tecsup.
           </p>
         </div>
 
@@ -47,7 +47,7 @@ export const RegistrationSection = () => {
             </CardHeader>
             <CardContent className="p-0">
               <div className="relative w-full bg-white dark:bg-gray-900/50" style={{ height: '800px' }}>
-                <iframe 
+                <iframe
                   src="https://docs.google.com/forms/d/1FCJlcKkFrHYLZWw0V4P9SXuEqv98z-jLjvoj2S9b_-c/viewform?embedded=true"
                   width="100%" 
                   height="100%"
@@ -55,7 +55,7 @@ export const RegistrationSection = () => {
                   marginHeight={0} 
                   marginWidth={0}
                   className="border-0 dark:opacity-95"
-                  title="Formulario de Registro Hackathon Tecsup 2025"
+                  title="Formulario de Registro EduHack 2025"
                 >
                   Cargando…
                 </iframe>
@@ -87,7 +87,8 @@ export const RegistrationSection = () => {
                 {benefits.map((benefit, index) => {
                   const IconComponent = benefit.icon;
                   return (
-                    <div 
+                    <div
+                    
                       key={index}
                       className="flex items-start gap-4 p-4 rounded-lg bg-card/50 dark:bg-card/30 border border-blue-500/10 dark:border-blue-500/20 hover:border-blue-500/30 dark:hover:border-blue-500/40 transition-all duration-300 hover:bg-blue-500/5 dark:hover:bg-blue-500/10"
                     >
@@ -105,26 +106,25 @@ export const RegistrationSection = () => {
             </div>
 
             {/* Call to Action */}
-            <Card className="border-pink-500/30 dark:border-pink-500/40 bg-gradient-to-br from-pink-500/10 to-purple-500/10 dark:from-pink-500/20 dark:to-purple-500/20">
-              <CardContent className="p-6 text-center">
-                <CheckCircle className="w-14 h-14 text-pink-600 dark:text-pink-400 mx-auto mb-4" />
-                <h4 className="text-2xl font-bold mb-2 text-foreground dark:text-foreground">¡Lugares Limitados!</h4>
-                <p className="text-muted-foreground dark:text-muted-foreground mb-4 text-lg">
-                  Solo 100 participantes tendrán la oportunidad de vivir esta experiencia única.
-                </p>
-                <a 
-                  href="https://docs.google.com/forms/d/1FCJlcKkFrHYLZWw0V4P9SXuEqv98z-jLjvoj2S9b_-c/viewform" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="inline-block"
-                >
-                  <Badge variant="secondary" className="bg-pink-500/20 dark:bg-pink-500/30 text-pink-600 dark:text-pink-400 text-lg px-6 py-3 cursor-pointer hover:bg-pink-500/30 dark:hover:bg-pink-500/40 transition-all duration-300 hover:scale-105">
-                    Registro gratuito →
-                  </Badge>
-                </a>
-              </CardContent>
-            </Card>
-          </div>
+        <Card className="border-pink-500/30 dark:border-pink-500/40 bg-gradient-to-br from-pink-500/10 to-purple-500/10 dark:from-pink-500/20 dark:to-purple-500/20">
+          <CardContent className="p-6 text-center">
+            <CheckCircle className="w-14 h-14 text-pink-600 dark:text-pink-400 mx-auto mb-4" />
+            <h4 className="text-2xl font-bold mb-2 text-foreground dark:text-foreground">¡Lugares Limitados!</h4>
+            <p className="text-muted-foreground dark:text-muted-foreground mb-4 text-lg">
+              Solo 100 participantes tendrán la oportunidad de vivir esta experiencia única.
+            </p>
+            <a
+              href="https://docs.google.com/forms/d/1FCJlcKkFrHYLZWw0V4P9SXuEqv98z-jLjvoj2S9b_-c/viewform"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block"
+            >
+              <Badge variant="secondary" className="bg-pink-500/20 dark:bg-pink-500/30 text-pink-600 dark:text-pink-400 text-lg px-6 py-3 cursor-pointer hover:bg-pink-500/30 dark:hover:bg-pink-500/40 transition-all duration-300 hover:scale-105">
+                Registro gratuito →
+              </Badge>
+            </a>
+          </CardContent>
+        </Card>
         </div>
       </div>
     </section>
