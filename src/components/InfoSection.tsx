@@ -17,16 +17,16 @@ const features = [
     iconColor: "text-purple-600 dark:text-purple-400"
   },
   {
-    icon: Clock,
-    title: "48 Horas Intensas",
-    description: "Desde el viernes 15 de marzo a las 6:00 PM hasta el domingo 16 a las 6:00 PM.",
+    icon: Target,
+    title: "Desafío con Agentes de IA",
+    description: "Enfócate en crear un agente de IA que prevenga la deserción estudiantil.",
     bgColor: "bg-orange-500/10 dark:bg-orange-400/20 group-hover:bg-orange-500/20 dark:group-hover:bg-orange-400/30",
-    iconColor: "text-orange-600 dark:text-orange-400"
+    iconColor: "text-orange-600 dark:text-orange-400",
   },
   {
     icon: Trophy,
     title: "Mentores Expertos",
-    description: "Acceso a mentores de la industria tecnológica que te guiarán durante todo el evento.",
+    description: "Acceso a talleres desarrollados por los mentores de la industria tecnológica que te guiarán durante todo el evento.",
     bgColor: "bg-green-500/10 dark:bg-green-400/20 group-hover:bg-green-500/20 dark:group-hover:bg-green-400/30",
     iconColor: "text-green-600 dark:text-green-400"
   }
@@ -41,14 +41,14 @@ const stats = [
     bgGradient: "from-tech-primary/10 to-tech-primary/5 dark:from-tech-primary/20 dark:to-tech-primary/10"
   },
   {
-    number: "15+",
+    number: "5+",
     label: "Mentores Expertos",
     icon: Award,
     color: "text-tech-secondary",
     bgGradient: "from-tech-secondary/10 to-tech-secondary/5 dark:from-tech-secondary/20 dark:to-tech-secondary/10"
   },
   {
-    number: "5",
+    number: "5+",
     label: "Categorías de Desafíos",
     icon: Target,
     color: "text-tech-accent",

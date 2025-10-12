@@ -1,7 +1,6 @@
 "use client";
 
-import { useState } from "react";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Trophy, Medal, Award, Sparkles, Target, Lightbulb, TrendingUp, Users, Zap } from "lucide-react";
 
@@ -11,41 +10,9 @@ const prizes = [
     position: "1er Lugar",
     amount: "S/ 2,500",
     icon: Trophy,
-    color: "from-yellow-400 via-yellow-500 to-yellow-600 dark:from-yellow-300 dark:via-yellow-400 dark:to-yellow-500",
-    glow: "shadow-[0_0_35px_rgba(250,204,21,0.6)] dark:shadow-[0_0_35px_rgba(253,224,71,0.8)]",
     benefits: [
-      "Premio en efectivo",
-      "Reconocimiento oficial",
-      "Certificado de honor",
-      "Networking con jurados",
-    ],
-  },
-  {
-    id: 2,
-    position: "2do Lugar",
-    amount: "S/ 1,000",
-    icon: Medal,
-    color: "from-gray-300 via-gray-400 to-gray-500 dark:from-gray-200 dark:via-gray-300 dark:to-gray-400",
-    glow: "shadow-[0_0_25px_rgba(156,163,175,0.4)] dark:shadow-[0_0_25px_rgba(229,231,235,0.6)]",
-    benefits: [
-      "Premio en efectivo",
-      "Reconocimiento oficial",
-      "Certificado de mérito",
-      "Mención especial",
-    ],
-  },
-  {
-    id: 3,
-    position: "3er Lugar",
-    amount: "S/ 500",
-    icon: Award,
-    color: "from-amber-600 via-amber-700 to-amber-800 dark:from-amber-500 dark:via-amber-600 dark:to-amber-700",
-    glow: "shadow-[0_0_25px_rgba(217,119,6,0.4)] dark:shadow-[0_0_25px_rgba(245,158,11,0.6)]",
-    benefits: [
-      "Premio en efectivo",
-      "Reconocimiento oficial",
-      "Certificado de participación",
-      "Experiencia destacada",
+      "Premio en efectivo por equipo",  
+      "Reconocimiento oficial"
     ],
   },
 ];
@@ -84,8 +51,6 @@ const evaluationCriteria = [
 ];
 
 export const PrizesSection = () => {
-  const [selectedPrize, setSelectedPrize] = useState<number | null>(null);
-
   return (
     <section
       id="premios"
@@ -115,58 +80,12 @@ export const PrizesSection = () => {
         </div>
 
         {/* Cuadro principal de premios */}
-        <div className="bg-white/50 dark:bg-gray-900/50 backdrop-blur-lg border border-gray-200/50 dark:border-gray-700/50 rounded-3xl p-10 shadow-2xl mb-20">
-          <div className="grid lg:grid-cols-3 gap-10">
-            {prizes.map((prize) => {
-              const isSelected = selectedPrize === prize.id;
-              const PrizeIcon = prize.icon;
-              return (
-                <Card
-                  key={prize.id}
-                  onClick={() =>
-                    setSelectedPrize(isSelected ? null : prize.id)
-                  }
-                  className={`relative cursor-pointer rounded-3xl overflow-hidden border-2 transition-all duration-500
-                    bg-gradient-to-br ${prize.color}
-                    ${isSelected ? `scale-105 ${prize.glow} z-10` : "hover:brightness-110 hover:scale-105"}
-                  `}
-                >
-                  {/* Overlay oscuro para contraste */}
-                  <div className="absolute inset-0 bg-black/20 dark:bg-black/40"></div>
-
-                  {/* Glow extra si está seleccionado */}
-                  {isSelected && (
-                    <div className="absolute inset-0 bg-gradient-to-br from-blue-500/20 to-purple-500/20 animate-pulse"></div>
-                  )}
-
-                  <CardHeader className="relative z-10 text-center pb-6">
-                    <div className="inline-flex items-center justify-center w-32 h-32 bg-white/90 dark:bg-gray-900/80 rounded-full mb-5 shadow-inner transition-all duration-500">
-                      <PrizeIcon className="w-16 h-16 text-gray-900 dark:text-white" />
-                    </div>
-                    <CardTitle className="text-3xl font-extrabold text-white drop-shadow-lg">
-                      {prize.position}
-                    </CardTitle>
-                    <div className="text-5xl font-extrabold text-white drop-shadow-lg mt-2">
-                      {prize.amount}
-                    </div>
-                  </CardHeader>
-
-                  <CardContent className="relative z-10 text-center space-y-3 pb-8">
-                    <div className="grid gap-2">
-                      {prize.benefits.map((benefit, i) => (
-                        <Badge
-                          key={i}
-                          variant="secondary"
-                          className="px-4 py-2 text-base rounded-full bg-white/30 dark:bg-white/20 text-white border-white/40 dark:border-white/30 backdrop-blur-sm"
-                        >
-                          {benefit}
-                        </Badge>
-                      ))}
-                    </div>
-                  </CardContent>
-                </Card>
-              );
-            })}
+        <div className="bg-white/50 dark:bg-gray-900/50 backdrop-blur-lg border border-gray-200/50 dark:border-gray-700/50 rounded-3xl p-10 shadow-2xl mb-20 text-center">
+          <h4 className="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white mb-4">
+            Premio en efectivo por equipo
+          </h4>
+          <div className="text-4xl md:text-5xl font-extrabold bg-gradient-to-r from-yellow-400 to-yellow-600 bg-clip-text text-transparent">
+            S/ 2,500 para el 1er Lugar
           </div>
         </div>
 

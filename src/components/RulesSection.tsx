@@ -18,35 +18,35 @@ const rules = [
     icon: Users,
     title: "Formación de Equipos",
     description:
-      "Equipos de 2 a 4 integrantes. Puedes venir con tu equipo formado o formar uno durante el evento. Participación individual o equipos formados con un máximo de 5 integrantes, de acuerdo a lo indicado en las bases.",
+      "Participación individual o equipos formados con un máximo de 5 integrantes, de acuerdo a lo indicado en las bases.",
     color: "blue",
   },
   {
     icon: Calendar,
     title: "Elegibilidad",
     description:
-      "Estudiantes universitarios, técnicos y profesionales menores de 30 años pueden participar. Estudiantes de universidades, institutos técnicos o escuelas de formación profesional de grado superior, matriculados en el año académico 2025 a nivel nacional.",
+      "Estudiantes de universidades, institutos técnicos o escuelas de formación profesional de grado superior, matriculados en el año académico 2025 a nivel nacional.",
     color: "purple",
   },
   {
     icon: Code,
     title: "Desarrollo",
     description:
-      "El código debe ser desarrollado durante las 48 horas del evento. No se aceptan proyectos previos. Las propuestas deberán ser originales, que no hayan sido premiadas anteriormente, ya sea en un evento similar o cualquier otro concurso.",
+      "Las propuestas deberán ser originales, que no hayan sido premiadas anteriormente, ya sea en un evento similar o cualquier otro concurso.",
     color: "emerald",
   },
   {
     icon: Lightbulb,
     title: "Originalidad",
     description:
-      "Las soluciones deben ser originales y no infringir derechos de autor o propiedad intelectual.",
+      "Si la información proporcionada por los participantes resulta ser falsa, se excluirá a todo el equipo de la competencia.",
     color: "blue",
   },
   {
     icon: Trophy,
     title: "Presentación",
     description:
-      "Cada equipo tendrá 5 minutos para presentar su solución frente al jurado el domingo.",
+      "Los equipos deberán presentar su propuesta en formato PITCH de 5 minutos como máximo y 3 minutos para las preguntas.",
     color: "purple",
   },
   {
@@ -59,14 +59,12 @@ const rules = [
 ];
 
 const notes = [
-  "El registro es gratuito",
-  "Se proporcionarán desayuno, almuerzo y cena",
-  "Habrá espacios para descanso 24/7",
-  "Llevar laptop personal y cargadores",
-  "Internet de alta velocidad y espacios de trabajo",
-  "Mentores disponibles todo el evento",
-  "Material promocional y souvenirs incluidos",
-  "Los ganadores tendrán oportunidades laborales",
+  "El registro y participación es gratuita.",
+  "Participan estudiantes de educación superior a nivel nacional.",
+  "Participas individualmente o en equipos de máximo 5 integrantes.",
+  "El cierre de inscripciones es el 31 de octubre.",
+  "Presentación de tu propuesta en formato PITCH de 5 minutos.",
+  "Desarrollo de talleres con mentores del sector.",
 ];
 
 export const RulesSection = () => {
@@ -118,7 +116,7 @@ export const RulesSection = () => {
         <div className="grid md:grid-cols-2 gap-8 mb-24">
           {/* Bases Document */}
           <a
-            href="https://docs.google.com/document/d/1sxQaXx7SXnkUOTdPtBYR5MzeeHMmdJjlhiMJWPytle8/edit?tab=t.0"
+            href="https://drive.google.com/file/d/1U_JR386XSrNOlVudn21w4h6wg_AON3qH/view?usp=drive_link"
             target="_blank"
             rel="noopener noreferrer"
             className="block"
@@ -154,7 +152,7 @@ export const RulesSection = () => {
 
           {/* Cronograma Document */}
           <a
-            href="https://docs.google.com/spreadsheets/d/1ZE3D8Y_iABt8GFUIRPXHAUeRDlyCTao8yyqCpXiInOI/edit?gid=273729676#gid=273729676"
+            href="https://drive.google.com/file/d/1JQoBHkBqczpfC7lDJn8EjvK8Uu51eQvk/view?usp=drive_link"
             target="_blank"
             rel="noopener noreferrer"
             className="block"

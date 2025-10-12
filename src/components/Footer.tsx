@@ -172,13 +172,12 @@ export const Footer = () => {
             </div>
           )}
 
-          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-gray-900 dark:text-white mb-2 sm:mb-3 tracking-tight">
-            Hackathon 2025
-          </h2>
-          <p className="text-gray-600 dark:text-gray-300 leading-relaxed max-w-lg sm:max-w-xl lg:max-w-2xl mx-auto mb-4 sm:mb-6 lg:mb-8 text-lg sm:text-xl px-2">
-            Únete al evento tecnológico más innovador del año. 48 horas de
-            código, creatividad y competencia para crear el futuro junto a TECSUP.
-          </p>
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-gray-900 dark:text-white mb-2 sm:mb-3 tracking-tight">
+            EduHack 2025
+            </h2>
+            <p className="text-gray-600 dark:text-gray-300 leading-relaxed max-w-lg sm:max-w-xl lg:max-w-2xl mx-auto mb-4 sm:mb-6 lg:mb-8 text-lg sm:text-xl px-2">
+            “Educación Superior sin deserción estudiantil: El poder de los agentes de IA”
+            </p>
 
           {/* Redes sociales */}
           <div className="flex flex-wrap gap-2 sm:gap-3 lg:gap-4 justify-center">
