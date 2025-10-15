@@ -116,7 +116,11 @@ export const RulesSection = () => {
         <div className="grid md:grid-cols-2 gap-8 mb-24">
           {/* Bases Document */}
           <a
+<<<<<<< HEAD
             href="https://drive.google.com/file/d/1U_JR386XSrNOlVudn21w4h6wg_AON3qH/view?usp=drive_link"
+=======
+            href="https://drive.google.com/file/d/1PmdpHLoNqN8WciiHncp8SHnky1bLO8M8/view?usp=sharing"
+>>>>>>> 90f2637d57a226743dc118e3a383c9e93a1dce61
             target="_blank"
             rel="noopener noreferrer"
             className="block"

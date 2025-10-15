@@ -6,7 +6,10 @@ import { PrizesSection } from "@/components/PrizesSection";
 import { RulesSection } from "@/components/RulesSection";
 import { RegistrationSection } from "@/components/RegistrationSection";
 import { Footer } from "@/components/Footer";
+<<<<<<< HEAD
 import { BrandbookSection } from "@/components/BrandbookSection";
+=======
+>>>>>>> 90f2637d57a226743dc118e3a383c9e93a1dce61
 
 const Index = () => {
   return (
@@ -17,7 +20,10 @@ const Index = () => {
       <ChallengesSection />
       <PrizesSection />
       <RulesSection />
+<<<<<<< HEAD
       <BrandbookSection/>
+=======
+>>>>>>> 90f2637d57a226743dc118e3a383c9e93a1dce61
       <RegistrationSection />
       <Footer />
     </div>

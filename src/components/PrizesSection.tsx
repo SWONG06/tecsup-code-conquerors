@@ -34,6 +34,10 @@ const prizes = [
     benefits: [
       "Premio en efectivo por equipo",
       "Reconocimiento oficial TECSUP",
+<<<<<<< HEAD
+=======
+      "Difusión del proyecto en canales institucionales",
+>>>>>>> 90f2637d57a226743dc118e3a383c9e93a1dce61
     ],
   },
   {
@@ -41,7 +45,15 @@ const prizes = [
     position: "3er Lugar",
     amount: "S/ 500",
     icon: Award,
+<<<<<<< HEAD
     benefits: ["Premio en efectivo por equipo"],
+=======
+    benefits: [
+      "Premio en efectivo por equipo",
+      "Reconocimiento oficial TECSUP",
+      "Difusión del proyecto en canales institucionales",
+    ],
+>>>>>>> 90f2637d57a226743dc118e3a383c9e93a1dce61
   },
 ];
 

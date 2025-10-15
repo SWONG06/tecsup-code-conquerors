@@ -8,7 +8,12 @@ export const RegistrationSection = () => {
     { icon: Clock, title: "Acceso completo al evento ", description: "Participa en toda la experiencia de la EduHack 2025" },
     { icon: Users, title: "Mentoría de expertos en el sector", description: "Recibe talleres de profesionales experimentados" },
     { icon: Network, title: "Networking con estudiantes", description: "Conecta con estudiantes de otras instituciones" },
+<<<<<<< HEAD
     { icon: CheckCircle, title: "FALTA POCO", description: "Asegura tu lugar en el evento antes de que se agoten los cupos" },
+=======
+    { icon: CheckCircle, title: "Certificado de participación", description: "Reciben los integrantes de los equipos ganadores" },
+    { icon: CheckCircle, title: "Falta poco", description: "Asegura tu lugar en el evento antes de que se agoten los cupos" },
+>>>>>>> 90f2637d57a226743dc118e3a383c9e93a1dce61
   ];
 
   return (
