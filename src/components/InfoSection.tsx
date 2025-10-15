@@ -12,11 +12,7 @@ const features = [
   {
     icon: Users,
     title: "Equipos Multidisciplinarios",
-<<<<<<< HEAD
     description: "Forma equipos de hasta 4 personas combinando diferentes especialidades y habilidades.",
-=======
-    description: "La participación puede ser individual o equipos con un máximo de 5 integrantes, de acuerdo a lo indicado en las bases.",
->>>>>>> 90f2637d57a226743dc118e3a383c9e93a1dce61
     bgColor: "bg-purple-500/10 dark:bg-purple-400/20 group-hover:bg-purple-500/20 dark:group-hover:bg-purple-400/30",
     iconColor: "text-purple-600 dark:text-purple-400"
   },

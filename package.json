@@ -68,11 +68,7 @@
     "@eslint/js": "^9.32.0",
     "@tailwindcss/typography": "^0.5.16",
     "@types/node": "^22.16.5",
-<<<<<<< HEAD
     "@types/react": "^18.3.23",
-=======
-    "@types/react": "^18.3.26",
->>>>>>> 90f2637d57a226743dc118e3a383c9e93a1dce61
     "@types/react-dom": "^18.3.7",
     "@vitejs/plugin-react-swc": "^3.11.0",
     "autoprefixer": "^10.4.21",
@@ -87,8 +83,4 @@
     "typescript-eslint": "^8.38.0",
     "vite": "^5.4.19"
   }
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> 90f2637d57a226743dc118e3a383c9e93a1dce61

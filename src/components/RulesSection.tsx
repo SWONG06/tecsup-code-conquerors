@@ -11,6 +11,7 @@ import {
   ExternalLink,
   BookOpen,
   CalendarDays,
+  Download,
 } from "lucide-react";
 
 const rules = [
@@ -115,80 +116,94 @@ export const RulesSection = () => {
         {/* Document Links Section */}
         <div className="grid md:grid-cols-2 gap-8 mb-24">
           {/* Bases Document */}
-          <a
-<<<<<<< HEAD
-            href="https://drive.google.com/file/d/1U_JR386XSrNOlVudn21w4h6wg_AON3qH/view?usp=drive_link"
-=======
-            href="https://drive.google.com/file/d/1PmdpHLoNqN8WciiHncp8SHnky1bLO8M8/view?usp=sharing"
->>>>>>> 90f2637d57a226743dc118e3a383c9e93a1dce61
-            target="_blank"
-            rel="noopener noreferrer"
-            className="block"
-          >
-            <Card className="group h-full border-2 border-blue-500/20 dark:border-blue-400/20 bg-white/80 dark:bg-gray-900/80 backdrop-blur-md rounded-2xl hover:shadow-2xl hover:shadow-blue-500/20 dark:hover:shadow-blue-400/20 transition-all duration-500 hover:scale-105 cursor-pointer">
-              <CardHeader className="text-center pb-6">
-                <div className="inline-flex items-center justify-center w-24 h-24 bg-gradient-to-br from-blue-500 to-blue-600 dark:from-blue-400 dark:to-blue-500 rounded-2xl mb-6 group-hover:rotate-6 transition-transform duration-500 mx-auto">
-                  <BookOpen className="w-12 h-12 text-white" />
-                </div>
-                <CardTitle className="text-3xl font-bold text-gray-900 dark:text-white mb-3">
-                  Bases Completas
-                </CardTitle>
-                <p className="text-gray-600 dark:text-gray-300 text-lg">
-                  Documento oficial con todas las reglas y condiciones del hackathon
-                </p>
-              </CardHeader>
-              <CardContent className="text-center pb-8">
-                <div className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white font-semibold px-8 py-4 rounded-lg text-lg shadow-lg hover:shadow-xl transform group-hover:scale-105 transition-all duration-300">
+          <Card className="group h-full border-2 border-blue-500/20 dark:border-blue-400/20 bg-white/80 dark:bg-gray-900/80 backdrop-blur-md rounded-2xl hover:shadow-2xl hover:shadow-blue-500/20 dark:hover:shadow-blue-400/20 transition-all duration-500 hover:scale-105">
+            <CardHeader className="text-center pb-6">
+              <div className="inline-flex items-center justify-center w-24 h-24 bg-gradient-to-br from-blue-500 to-blue-600 dark:from-blue-400 dark:to-blue-500 rounded-2xl mb-6 group-hover:rotate-6 transition-transform duration-500 mx-auto">
+                <BookOpen className="w-12 h-12 text-white" />
+              </div>
+              <CardTitle className="text-3xl font-bold text-gray-900 dark:text-white mb-3">
+                Bases Completas
+              </CardTitle>
+              <p className="text-gray-600 dark:text-gray-300 text-lg">
+                Documento oficial con todas las reglas y condiciones del hackathon
+              </p>
+            </CardHeader>
+            <CardContent className="text-center pb-8">
+              <div className="flex flex-col gap-3">
+                <a
+                  href="https://drive.google.com/file/d/1PmdpHLoNqN8WciiHncp8SHnky1bLO8M8/view?usp=sharing"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white font-semibold px-8 py-4 rounded-lg text-lg shadow-lg hover:shadow-xl transform group-hover:scale-105 transition-all duration-300"
+                >
                   Ver Bases Completas
                   <ExternalLink className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-                </div>
-                <div className="mt-4">
-                  <Badge
-                    variant="secondary"
-                    className="bg-blue-500/10 dark:bg-blue-400/10 text-blue-600 dark:text-blue-400 px-4 py-2"
-                  >
-                    Documento Google Docs
-                  </Badge>
-                </div>
-              </CardContent>
-            </Card>
-          </a>
+                </a>
+                <a
+                  href="https://drive.google.com/uc?export=download&id=1PmdpHLoNqN8WciiHncp8SHnky1bLO8M8"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center gap-2 bg-white hover:bg-gray-50 dark:bg-gray-800 dark:hover:bg-gray-700 text-blue-600 dark:text-blue-400 font-semibold px-8 py-4 rounded-lg text-lg border-2 border-blue-500 dark:border-blue-400 shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300"
+                >
+                  <Download className="w-5 h-5" />
+                  Descargar PDF
+                </a>
+              </div>
+              <div className="mt-4">
+                <Badge
+                  variant="secondary"
+                  className="bg-blue-500/10 dark:bg-blue-400/10 text-blue-600 dark:text-blue-400 px-4 py-2"
+                >
+                  Documento Google Docs
+                </Badge>
+              </div>
+            </CardContent>
+          </Card>
 
           {/* Cronograma Document */}
-          <a
-            href="https://drive.google.com/file/d/1JQoBHkBqczpfC7lDJn8EjvK8Uu51eQvk/view?usp=drive_link"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="block"
-          >
-            <Card className="group h-full border-2 border-emerald-500/20 dark:border-emerald-400/20 bg-white/80 dark:bg-gray-900/80 backdrop-blur-md rounded-2xl hover:shadow-2xl hover:shadow-emerald-500/20 dark:hover:shadow-emerald-400/20 transition-all duration-500 hover:scale-105 cursor-pointer">
-              <CardHeader className="text-center pb-6">
-                <div className="inline-flex items-center justify-center w-24 h-24 bg-gradient-to-br from-emerald-500 to-emerald-600 dark:from-emerald-400 dark:to-emerald-500 rounded-2xl mb-6 group-hover:rotate-6 transition-transform duration-500 mx-auto">
-                  <CalendarDays className="w-12 h-12 text-white" />
-                </div>
-                <CardTitle className="text-3xl font-bold text-gray-900 dark:text-white mb-3">
-                  Cronograma 2025
-                </CardTitle>
-                <p className="text-gray-600 dark:text-gray-300 text-lg">
-                  Calendario detallado con todas las fechas y actividades del evento
-                </p>
-              </CardHeader>
-              <CardContent className="text-center pb-8">
-                <div className="inline-flex items-center gap-2 bg-gradient-to-r from-emerald-500 to-emerald-600 hover:from-emerald-600 hover:to-emerald-700 text-white font-semibold px-8 py-4 rounded-lg text-lg shadow-lg hover:shadow-xl transform group-hover:scale-105 transition-all duration-300">
+          <Card className="group h-full border-2 border-emerald-500/20 dark:border-emerald-400/20 bg-white/80 dark:bg-gray-900/80 backdrop-blur-md rounded-2xl hover:shadow-2xl hover:shadow-emerald-500/20 dark:hover:shadow-emerald-400/20 transition-all duration-500 hover:scale-105">
+            <CardHeader className="text-center pb-6">
+              <div className="inline-flex items-center justify-center w-24 h-24 bg-gradient-to-br from-emerald-500 to-emerald-600 dark:from-emerald-400 dark:to-emerald-500 rounded-2xl mb-6 group-hover:rotate-6 transition-transform duration-500 mx-auto">
+                <CalendarDays className="w-12 h-12 text-white" />
+              </div>
+              <CardTitle className="text-3xl font-bold text-gray-900 dark:text-white mb-3">
+                Cronograma 2025
+              </CardTitle>
+              <p className="text-gray-600 dark:text-gray-300 text-lg">
+                Calendario detallado con todas las fechas y actividades del evento
+              </p>
+            </CardHeader>
+            <CardContent className="text-center pb-8">
+              <div className="flex flex-col gap-3">
+                <a
+                  href="https://drive.google.com/file/d/1JQoBHkBqczpfC7lDJn8EjvK8Uu51eQvk/view?usp=drive_link"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-emerald-500 to-emerald-600 hover:from-emerald-600 hover:to-emerald-700 text-white font-semibold px-8 py-4 rounded-lg text-lg shadow-lg hover:shadow-xl transform group-hover:scale-105 transition-all duration-300"
+                >
                   Ver Cronograma
                   <ExternalLink className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-                </div>
-                <div className="mt-4">
-                  <Badge
-                    variant="secondary"
-                    className="bg-emerald-500/10 dark:bg-emerald-400/10 text-emerald-600 dark:text-emerald-400 px-4 py-2"
-                  >
-                    Google Sheets
-                  </Badge>
-                </div>
-              </CardContent>
-            </Card>
-          </a>
+                </a>
+                <a
+                  href="https://drive.google.com/uc?export=download&id=1JQoBHkBqczpfC7lDJn8EjvK8Uu51eQvk"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center gap-2 bg-white hover:bg-gray-50 dark:bg-gray-800 dark:hover:bg-gray-700 text-emerald-600 dark:text-emerald-400 font-semibold px-8 py-4 rounded-lg text-lg border-2 border-emerald-500 dark:border-emerald-400 shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300"
+                >
+                  <Download className="w-5 h-5" />
+                  Descargar Excel
+                </a>
+              </div>
+              <div className="mt-4">
+                <Badge
+                  variant="secondary"
+                  className="bg-emerald-500/10 dark:bg-emerald-400/10 text-emerald-600 dark:text-emerald-400 px-4 py-2"
+                >
+                  Google Sheets
+                </Badge>
+              </div>
+            </CardContent>
+          </Card>
         </div>
 
         {/* Rules */}
