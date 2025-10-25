@@ -1,13 +1,12 @@
-import React, { useState, useEffect } from "react";
-import {
-  Trophy, Users, Code, Zap, Star
-} from "lucide-react";
-import segundologo from "../assets/segundologo.png";   // Logo claro
-import modonoche from "../assets/modonoche.png";       // Logo oscuro
-import logo from "../assets/logo.png";                // Logo genérico
+import { useState, useEffect } from "react";
+import { Zap, Star } from "lucide-react";
+import segundologo from "../assets/segundologo.png";
+import modonoche from "../assets/modonoche.png";
 
 // 🔢 Animated Counter
-const AnimatedCounter = ({ end, duration = 2000, prefix = '', suffix = '' }) => {
+const AnimatedCounter = ({ end, duration = 2000, prefix = '', suffix = '' }: {
+  end: number; duration?: number; prefix?: string; suffix?: string;
+}) => {
   const [count, setCount] = useState(0);
   useEffect(() => {
     let startTime: number | null = null;
@@ -45,7 +44,7 @@ const CountdownTimer = () => {
     <div className="grid grid-cols-4 gap-2 sm:gap-4">
       {Object.entries(timeLeft).map(([unit, value]) => (
         <div key={unit} className="relative group">
-          <div className="absolute inset-0 bg-gradient-to-br from-purple-600/20 to-blue-600/20 rounded-xl blur-xl group-hover:blur-2xl transition-all duration-300"></div>
+          <div className="absolute inset-0 bg-gradient-to-br from-purple-600/20 to-blue-600/20 rounded-xl blur-xl group-hover:blur-2xl transition-all duration-300" />
           <div className="relative bg-white dark:bg-gray-900 p-3 sm:p-4 rounded-xl border border-purple-500/20 group-hover:border-purple-500/40 transition-all duration-300">
             <div className="text-3xl sm:text-4xl md:text-5xl font-bold bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
               {String(value).padStart(2, "0")}
@@ -66,10 +65,10 @@ const FloatingParticles = () => (
         key={i}
         className="floating-particle"
         style={{
-          "--random-x": `${Math.random() * 100}%`,
-          "--random-y": `${Math.random() * 100}%`,
-          "--random-delay": `${Math.random() * 10}s`,
-        } as React.CSSProperties}
+          left: `${Math.random() * 100}%`,
+          top: `${Math.random() * 100}%`,
+          animationDelay: `${Math.random() * 10}s`,
+        }}
       >
         <div
           className={`w-1 h-1 bg-gradient-to-r ${
@@ -79,7 +78,7 @@ const FloatingParticles = () => (
               ? "from-blue-400 to-cyan-400"
               : "from-cyan-400 to-purple-400"
           } rounded-full opacity-60`}
-        ></div>
+        />
       </div>
     ))}
   </div>
@@ -90,11 +89,10 @@ export const HeroSection = () => {
     <section id="hero" className="min-h-screen bg-white dark:bg-black relative overflow-hidden transition-colors duration-500">
       {/* 🌌 Background Layers */}
       <div className="absolute inset-0">
-        <div className="absolute inset-0 bg-gradient-to-br from-purple-900/20 via-transparent to-blue-900/20 dark:from-purple-900/30 dark:to-blue-900/30"></div>
-        <div className="absolute inset-0 bg-gradient-to-tr from-cyan-900/10 via-transparent to-purple-900/10 dark:from-cyan-900/20 dark:to-purple-900/20"></div>
-        {/* Orbs */}
-        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-purple-400/20 dark:bg-purple-600/20 rounded-full blur-[100px] animate-pulse-glow"></div>
-        <div className="absolute bottom-1/3 right-1/3 w-[500px] h-[500px] bg-blue-400/15 dark:bg-blue-600/15 rounded-full blur-[120px] animate-pulse-glow"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-purple-900/20 via-transparent to-blue-900/20 dark:from-purple-900/30 dark:to-blue-900/30" />
+        <div className="absolute inset-0 bg-gradient-to-tr from-cyan-900/10 via-transparent to-purple-900/10 dark:from-cyan-900/20 dark:to-purple-900/20" />
+        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-purple-400/20 dark:bg-purple-600/20 rounded-full blur-[100px] animate-pulse-glow" />
+        <div className="absolute bottom-1/3 right-1/3 w-[500px] h-[500px] bg-blue-400/15 dark:bg-blue-600/15 rounded-full blur-[120px] animate-pulse-glow" />
       </div>
 
       {/* ✨ Floating Particles */}
@@ -116,7 +114,7 @@ export const HeroSection = () => {
             {/* 🔹 Title */}
             <h1 className="text-center lg:text-left">
               <span className="text-5xl sm:text-6xl md:text-8xl lg:text-[10rem] font-black bg-gradient-to-r from-purple-400 via-blue-400 to-cyan-400 bg-clip-text text-transparent animate-gradient leading-none">
-              EDUHACK
+                EDUHACK
               </span>
               <span className="block text-2xl sm:text-4xl md:text-6xl lg:text-8xl font-extralight bg-gradient-to-r from-cyan-400 via-purple-400 to-blue-400 bg-clip-text text-transparent animate-gradient mt-2">
                 2025
@@ -125,38 +123,44 @@ export const HeroSection = () => {
 
             {/* 🔹 Description */}
             <p className="text-2xl sm:text-3xl md:text-4xl text-gray-700 dark:text-gray-300 leading-relaxed">
-            “Educación Superior sin deserción estudiantil: El poder de
-
-los agentes de IA”{" "}
+              “Educación Superior sin deserción estudiantil: El poder de los agentes de IA”
             </p>
 
-            {/* 🔹 Stats */}
-            <div className="grid grid-cols-3 gap-6 py-8">
-              <div className="relative bg-white dark:bg-gray-900 p-4 rounded-2xl shadow border border-purple-500/20">
-                <Users className="w-8 h-8 text-purple-400 mb-2 mx-auto" />
-                <div className="text-4xl font-bold bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
-                  <AnimatedCounter end={200} suffix="+" />
-                </div>
-                <p className="text-lg text-gray-600 dark:text-gray-400">Participantes</p>
+            {/* 🟪 Tarjetas individuales */}
+            <div className="flex flex-col sm:flex-row justify-center lg:justify-start gap-6">
+              {/* 📅 Fecha */}
+              <div className="flex items-center gap-3 px-6 py-4 rounded-2xl
+                              bg-white/70 dark:bg-gray-900/40 backdrop-blur-xl 
+                              border border-purple-500/20 shadow-lg 
+                              hover:border-purple-500/40 transition-all duration-300">
+                <img
+                  src="src/assets/Calendario.png"
+                  alt="Calendario"
+                  className="w-8 h-8 sm:w-10 sm:h-10 object-contain"
+                />
+                <span className="text-lg sm:text-xl font-semibold text-gray-800 dark:text-gray-100">
+                  1 de noviembre
+                </span>
               </div>
-              <div className="relative bg-white dark:bg-gray-900 p-4 rounded-2xl shadow border border-blue-500/20">
-                <Code className="w-8 h-8 text-blue-400 mb-2 mx-auto" />
-                <div className="text-4xl font-bold bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
-                  <AnimatedCounter end={48} suffix="h" />
-                </div>
-                <p className="text-lg text-gray-600 dark:text-gray-400">Desarrollo</p>
-              </div>
-              <div className="relative bg-white dark:bg-gray-900 p-4 rounded-2xl shadow border border-cyan-500/20">
-                <Trophy className="w-8 h-8 text-cyan-400 mb-2 mx-auto" />
-                <div className="text-4xl font-bold bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
-                  <AnimatedCounter end={50} suffix="K" />
-                </div>
-                <p className="text-lg text-gray-600 dark:text-gray-400">en Premios</p>
+
+              {/* 💻 Modalidad */}
+              <div className="flex items-center gap-3 px-6 py-4 rounded-2xl
+                              bg-white/70 dark:bg-gray-900/40 backdrop-blur-xl 
+                              border border-purple-500/20 shadow-lg 
+                              hover:border-purple-500/40 transition-all duration-300">
+                <img
+                  src="src/assets/Laptop.png"
+                  alt="Laptop"
+                  className="w-8 h-8 sm:w-10 sm:h-10 object-contain"
+                />
+                <span className="text-lg sm:text-xl font-semibold text-gray-800 dark:text-gray-100">
+                  Modalidad Virtual
+                </span>
               </div>
             </div>
 
             {/* 🔹 Countdown */}
-            <div className="relative p-6 rounded-3xl bg-white/70 dark:bg-gray-900/40 backdrop-blur-xl border border-purple-500/20">
+            <div className="relative p-6 rounded-3xl bg-white/70 dark:bg-gray-900/40 backdrop-blur-xl border border-purple-500/20 shadow-lg">
               <p className="text-center text-lg text-gray-600 dark:text-gray-400 mb-4 font-medium">
                 COMIENZA EN
               </p>
@@ -164,25 +168,19 @@ los agentes de IA”{" "}
             </div>
           </div>
 
-          {/* 🔹 Right sin fondo de luz */}
+          {/* 🔹 Right */}
           <div className="flex justify-center lg:justify-end relative">
-            {/* Logo claro */}
             <img
               src={modonoche}
               alt="Logo TECSUP Claro"
-              className="relative w-[300px] sm:w-[400px] md:w-[500px] object-contain 
-                         transition-transform duration-500 hover:scale-110 dark:hidden"
+              className="relative w-[300px] sm:w-[400px] md:w-[500px] object-contain transition-transform duration-500 hover:scale-110 dark:hidden"
             />
-            
-            {/* Logo oscuro */}
             <img
               src={segundologo}
               alt="Logo TECSUP Oscuro"
-              className="relative w-[300px] sm:w-[400px] md:w-[500px] object-contain 
-                         transition-transform duration-500 hover:scale-110 hidden dark:block"
+              className="relative w-[300px] sm:w-[400px] md:w-[500px] object-contain transition-transform duration-500 hover:scale-110 hidden dark:block"
             />
           </div>
-
         </div>
       </div>
     </section>
