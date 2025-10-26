@@ -138,7 +138,7 @@ export const RulesSection = () => {
             <CardContent className="relative z-10 pb-8">
               <div className="flex flex-col gap-3">
                 <a
-                  href="https://docs.google.com/document/d/18O5P6kaXgmeHq76Xc2pyPDoRjBcZf_Wu/edit"
+                  href="https://drive.google.com/file/d/15kURJYlorvdbMT0w5p3uy7Hie0BUoNLq/view?usp=sharing"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="group/btn inline-flex items-center justify-center gap-2 bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white font-semibold px-8 py-4 rounded-xl text-base shadow-lg hover:shadow-blue-500/50 transition-all duration-300 transform hover:scale-105"
@@ -148,7 +148,7 @@ export const RulesSection = () => {
                 </a>
 
                 <a
-                  href="https://docs.google.com/document/d/18O5P6kaXgmeHq76Xc2pyPDoRjBcZf_Wu/export?format=pdf"
+                  href="https://drive.google.com/drive/folders/1B1k3SQIQfHGw0Er3N9PsrjXIddr9kOY_"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="group/btn inline-flex items-center justify-center gap-2 bg-white hover:bg-blue-50 dark:bg-gray-700 dark:hover:bg-gray-600 text-blue-600 dark:text-blue-400 font-semibold px-8 py-4 rounded-xl text-base border-2 border-blue-500 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
@@ -200,11 +200,6 @@ export const RulesSection = () => {
                 </a>
               </div>
 
-              <div className="mt-6 flex justify-center">
-                <Badge className="bg-orange-500/10 text-orange-600 dark:text-orange-400 px-4 py-2 font-semibold border border-orange-500/30">
-                  📊 Google Sheets
-                </Badge>
-              </div>
             </CardContent>
           </Card>
         </div>
