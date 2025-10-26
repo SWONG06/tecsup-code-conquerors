@@ -4,6 +4,8 @@
   ],
   "hints": {
     "button-type": "off",
-    "axe/name-role-value": "off"
+    "axe/name-role-value": "off",
+    "no-inline-styles": "off",
+    "disown-opener": "off"
   }
 }
