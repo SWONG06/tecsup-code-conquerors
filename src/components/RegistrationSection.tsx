@@ -2,6 +2,8 @@ import { useState } from "react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { CheckCircle, Users, Coffee, Network, Award, Clock, Code, Globe, Lightbulb, Download } from "lucide-react";
+import qr from "../assets/qr.png";
+
 
 export const RegistrationSection = () => {
   const registrationBenefits = [
@@ -93,11 +95,7 @@ export const RegistrationSection = () => {
               </CardHeader>
               <CardContent className="p-6 flex flex-col items-center gap-6">
                 <div className="bg-white p-4 rounded-2xl shadow-lg border-4 border-purple-200 dark:border-purple-800 hover:scale-105 transition-transform duration-300">
-                  <img 
-                    src="/src/assets/qr.png" 
-                    alt="QR Code - Registro EduHack 2025"
-                    className="w-40 h-40"
-                  />
+                  <img src={qr} alt="QR Code - Registro EduHack 2025" className="w-40 h-40" />
                 </div>
                 
                 <div className="text-center w-full">

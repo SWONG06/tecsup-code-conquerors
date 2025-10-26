@@ -2,6 +2,9 @@ import { useState, useEffect } from "react";
 import { Zap, Star } from "lucide-react";
 import segundologo from "../assets/segundologo.png";
 import modonoche from "../assets/modonoche.png";
+import calendario from "../assets/Calendario.png";
+import laptop from "../assets/Laptop.png";
+
 
 // 🔢 Animated Counter
 const AnimatedCounter = ({ end, duration = 2000, prefix = '', suffix = '' }: {
@@ -133,11 +136,7 @@ export const HeroSection = () => {
                               bg-white/70 dark:bg-gray-900/40 backdrop-blur-xl 
                               border border-purple-500/20 shadow-lg 
                               hover:border-purple-500/40 transition-all duration-300">
-                <img
-                  src="src/assets/Calendario.png"
-                  alt="Calendario"
-                  className="w-8 h-8 sm:w-10 sm:h-10 object-contain"
-                />
+                <img src={calendario} alt="Calendario" className="w-8 h-8 sm:w-10 sm:h-10 object-contain" />
                 <span className="text-lg sm:text-xl font-semibold text-gray-800 dark:text-gray-100">
                   1 de noviembre
                 </span>
@@ -148,11 +147,7 @@ export const HeroSection = () => {
                               bg-white/70 dark:bg-gray-900/40 backdrop-blur-xl 
                               border border-purple-500/20 shadow-lg 
                               hover:border-purple-500/40 transition-all duration-300">
-                <img
-                  src="src/assets/Laptop.png"
-                  alt="Laptop"
-                  className="w-8 h-8 sm:w-10 sm:h-10 object-contain"
-                />
+                <img src={laptop} alt="Laptop" className="w-8 h-8 sm:w-10 sm:h-10 object-contain" />
                 <span className="text-lg sm:text-xl font-semibold text-gray-800 dark:text-gray-100">
                   Modalidad Virtual
                 </span>
