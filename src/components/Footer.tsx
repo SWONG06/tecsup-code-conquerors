@@ -180,47 +180,7 @@ export const Footer = () => {
               "Educación Superior sin deserción estudiantil: El poder de los agentes de IA"
             </p>
 
-            {/* 📘 Sección Brandbook */}
-            <div className="mb-6 sm:mb-8">
-              <div className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-purple-100 to-blue-100 dark:from-purple-900/30 dark:to-blue-900/30 rounded-full border border-purple-200 dark:border-purple-700 mb-4">
-                <BookOpen className="w-4 h-4 text-purple-600 dark:text-purple-400" />
-                <span className="text-sm font-semibold text-purple-700 dark:text-purple-300">
-                  Recursos de Marca
-                </span>
-              </div>
-              
-              <div className="flex flex-wrap gap-3 justify-center">
-                {/* Botón Ver Brandbook */}
-                <Button
-                  onClick={() => setShowBrandbook(true)}
-                  className="flex items-center gap-2 bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
-                >
-                  <FileText className="w-4 h-4" />
-                  Ver Brandbook
-                </Button>
-
-                {/* Botón Carpeta Drive */}
-                <Button
-                  asChild
-                  variant="outline"
-                  className="flex items-center gap-2 border-purple-300 dark:border-purple-700 hover:bg-purple-50 dark:hover:bg-purple-900/20 transition-all duration-300 hover:scale-105"
-                >
-                  <a
-                    href={DRIVE_FOLDER}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <ExternalLink className="w-4 h-4" />
-                    Recursos en Drive
-                  </a>
-                </Button>
-              </div>
-
-              {/* Info adicional */}
-              <p className="text-xs text-gray-500 dark:text-gray-400 mt-3 max-w-md mx-auto">
-                Manual de identidad visual con lineamientos de diseño, paleta de colores y tipografía oficial
-              </p>
-            </div>
+           
 
             {/* Redes sociales */}
             <div className="flex flex-wrap gap-2 sm:gap-3 lg:gap-4 justify-center">
