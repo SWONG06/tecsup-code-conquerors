@@ -148,7 +148,7 @@ export const RulesSection = () => {
                 </a>
 
                 <a
-                  href="https://drive.google.com/drive/folders/1B1k3SQIQfHGw0Er3N9PsrjXIddr9kOY_"
+                  href="https://drive.google.com/file/d/15kURJYlorvdbMT0w5p3uy7Hie0BUoNLq/view?usp=sharing"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="group/btn inline-flex items-center justify-center gap-2 bg-white hover:bg-blue-50 dark:bg-gray-700 dark:hover:bg-gray-600 text-blue-600 dark:text-blue-400 font-semibold px-8 py-4 rounded-xl text-base border-2 border-blue-500 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
